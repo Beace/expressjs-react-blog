@@ -1,0 +1,112 @@
+var mongoose = require('../mongo.js');
+var markdown = require( "markdown" ).markdown;
+var articleSchema = require('../src/models/schema.js');
+var marked = require('marked');
+module.exports = function(app) {
+    app.get('/', function(req, res) {
+        res.render('index', {
+            title: 'Article'
+        });
+    });
+
+    app.get('/about', function(req, res) {
+        res.render('index', {
+            title: 'About'
+        });
+    });
+
+    app.get('/contact', function(req, res) {
+        res.render('index', {
+            title: 'Contact'
+        });
+    });
+
+    app.get('/work', function(req, res) {
+        res.render('index', {
+            title: 'work'
+        });
+    });
+    app.get('/article/:id', function(req, res) {
+        res.render('index', {
+            title: 'article'
+        });
+    });
+    app.get('/admin', function(req, res) {
+        res.render('index', {
+            title: 'admin'
+        });
+    });
+
+    app.get('/users', function(req, res, next) {
+        res.send('respond with a resource');
+    });
+
+    //API
+    app.get('/articles', function(req, res) {
+        var db = mongoose.createConnection('localhost', 'article');
+        db.once('open', function() {
+            var Article = mongoose.model('articles', articleSchema);
+            Article.find({
+                author: "Beace"
+            }, function(err, docs) {
+                if (err) console.log(err);
+                else {
+                    // docs.forEach((doc) => {
+                    //     doc.content = markdown.toHTML(doc.content);
+                    // })
+                    res.send(docs);
+                }
+            })
+        });
+    })
+
+    app.get('/post/:id', function(req, res) {
+        var postId = req.params.id;
+        var db = mongoose.createConnection('localhost', 'article');
+        db.once('open', function() {
+            var Article = mongoose.model('articles', articleSchema);
+            Article.findOne({
+                _id: postId
+            }, function(err, doc) {
+                if (err) console.log(err);
+                else {
+                    if(doc) {
+                        marked.setOptions({
+                          renderer: new marked.Renderer(),
+                          gfm: true,
+                          tables: true,
+                          breaks: false,
+                          pedantic: false,
+                          sanitize: false,
+                          smartLists: true,
+                          smartypants: false,
+                          highlight: function (code) {
+                            return require('highlight.js').highlightAuto(code).value;
+                          }
+                        });
+                        // doc.content = markdown.toHTML(doc.content);
+                        doc.content = marked(doc.content);
+                    }
+                    res.send(doc);
+                }
+            })
+        });
+    })
+
+    app.post('/api/post', function(req, res) {
+        let model = req.body;
+        var db = mongoose.createConnection('localhost', 'article');
+        db.once('open', function(err) {
+            var Article = mongoose.model('articles', articleSchema);
+            var article = new Article(model);
+            article.save(model);
+            if(err) {
+                return err;
+            }
+            res.send({
+                code : 0,
+                msg: "success"
+            })
+        });
+    })
+};
