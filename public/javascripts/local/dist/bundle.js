@@ -26870,7 +26870,6 @@
 	                                null,
 	                                _react2.default.createElement(
 	                                    _reactRouter.Link,
-<<<<<<< HEAD
 	                                    { to: "/book" },
 	                                    "book"
 	                                )
@@ -26880,17 +26879,6 @@
 	                                null,
 	                                _react2.default.createElement(
 	                                    _reactRouter.Link,
-	                                    { to: "/admin" },
-	                                    "admin"
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                "li",
-	                                null,
-	                                _react2.default.createElement(
-	                                    _reactRouter.Link,
-=======
->>>>>>> 2284341c131389bae2448f89056c3acea9475e54
 	                                    { to: "/work" },
 	                                    "work"
 	                                )

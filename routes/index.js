@@ -84,11 +84,7 @@ module.exports = function(app) {
                           pedantic: false,
                           sanitize: false,
                           smartLists: true,
-<<<<<<< HEAD
                           smartypants: false            
-=======
-                          smartypants: false
->>>>>>> 2284341c131389bae2448f89056c3acea9475e54
                         });
                         // doc.content = markdown.toHTML(doc.content);
                         doc.content = marked(doc.content);
