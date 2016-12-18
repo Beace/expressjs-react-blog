@@ -16,7 +16,7 @@ export default class Post extends Component {
     componentDidMount() {
         let _this = this;
         let id = this.props.params.id;
-        fetch('http://localhost:3000/post/' + id).then(function(response) {
+        fetch('https://beace.tech/post/' + id).then(function(response) {
             return response.json().then(function(json) {
                 if(json) {
                     _this.setState({

@@ -31,7 +31,7 @@ class Home extends Component {
 
     componentDidMount() {
         let _this = this;
-        fetch('http://localhost:3000/articles').then(function(response) {
+        fetch('https://beace.tech/articles').then(function(response) {
             return response.json().then(function(json) {
                 if(json) {
                     _this.setState({

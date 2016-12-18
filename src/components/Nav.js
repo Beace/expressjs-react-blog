@@ -17,7 +17,6 @@ export default class Nav extends Component {
                             <li><Link to = "/">HOME</Link></li>
                             <li><Link to = "/about">about</Link></li>
                             <li><Link to = "/contact">contact</Link></li>
-                            <li><Link to = "/admin">admin</Link></li>
                             <li><Link to = "/work">work</Link></li>
                         </ul>
                     </div>

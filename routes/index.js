@@ -79,10 +79,7 @@ module.exports = function(app) {
                           pedantic: false,
                           sanitize: false,
                           smartLists: true,
-                          smartypants: false,
-                          highlight: function (code) {
-                            return require('highlight.js').highlightAuto(code).value;
-                          }
+                          smartypants: false
                         });
                         // doc.content = markdown.toHTML(doc.content);
                         doc.content = marked(doc.content);
