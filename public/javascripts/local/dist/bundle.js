@@ -26490,7 +26490,7 @@
 	        key: "componentDidMount",
 	        value: function componentDidMount() {
 	            var _this = this;
-	            fetch('http://localhost:3000/articles').then(function (response) {
+	            fetch('https://beace.tech/articles').then(function (response) {
 	                return response.json().then(function (json) {
 	                    if (json) {
 	                        _this.setState({
@@ -26870,6 +26870,7 @@
 	                                null,
 	                                _react2.default.createElement(
 	                                    _reactRouter.Link,
+<<<<<<< HEAD
 	                                    { to: "/book" },
 	                                    "book"
 	                                )
@@ -26888,6 +26889,8 @@
 	                                null,
 	                                _react2.default.createElement(
 	                                    _reactRouter.Link,
+=======
+>>>>>>> 2284341c131389bae2448f89056c3acea9475e54
 	                                    { to: "/work" },
 	                                    "work"
 	                                )
@@ -27315,7 +27318,7 @@
 	        value: function componentDidMount() {
 	            var _this = this;
 	            var id = this.props.params.id;
-	            fetch('http://localhost:3000/post/' + id).then(function (response) {
+	            fetch('https://beace.tech/post/' + id).then(function (response) {
 	                return response.json().then(function (json) {
 	                    if (json) {
 	                        _this.setState({
