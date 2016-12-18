@@ -7,6 +7,7 @@ import Contacts from "./components/Contacts.js"
 import Post from "./components/Post.js"
 import Abouts from "./components/About.js"
 import TextArea from "./beComponents/TextArea.js";
+import BookForm from "./beComponents/BookForm.js";
 import _ from "lodash";
 class App extends Component {
     render() {
@@ -31,7 +32,7 @@ class Home extends Component {
 
     componentDidMount() {
         let _this = this;
-        fetch('http://localhost:3000/articles').then(function(response) {
+        fetch('https://beace.tech/articles').then(function(response) {
             return response.json().then(function(json) {
                 if(json) {
                     _this.setState({
@@ -160,6 +161,17 @@ class Admin extends Component {
     }
 }
 
+class Book extends Component {
+    render() {
+        return (
+            <div>
+                <Header/>
+                <BookForm/>
+            </div>
+        )
+    }
+}
+
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
@@ -169,6 +181,7 @@ export default (
         <Route path="about" component={About}/>
         <Route path="contact" component={Contact}/>
         <Route path="admin" component={Admin}/>
+        <Route path="book" component={Book}/>
         <Route path="*" component={NoMatch}/>
     </Route>
 )

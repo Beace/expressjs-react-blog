@@ -36,6 +36,11 @@ module.exports = function(app) {
             title: 'admin'
         });
     });
+    app.get('/book', function(req, res) {
+        res.render('index', {
+            title: 'book'
+        });
+    });
 
     app.get('/users', function(req, res, next) {
         res.send('respond with a resource');
@@ -79,10 +84,7 @@ module.exports = function(app) {
                           pedantic: false,
                           sanitize: false,
                           smartLists: true,
-                          smartypants: false,
-                          highlight: function (code) {
-                            return require('highlight.js').highlightAuto(code).value;
-                          }
+                          smartypants: false            
                         });
                         // doc.content = markdown.toHTML(doc.content);
                         doc.content = marked(doc.content);
