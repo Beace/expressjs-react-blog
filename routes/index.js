@@ -2,6 +2,7 @@ var mongoose = require('../mongo.js');
 var markdown = require( "markdown" ).markdown;
 var articleSchema = require('../src/models/schema.js');
 var marked = require('marked');
+var highlightjs = require('highlight.js');
 module.exports = function(app) {
     app.get('/', function(req, res) {
         res.render('index', {
@@ -56,9 +57,6 @@ module.exports = function(app) {
             }, function(err, docs) {
                 if (err) console.log(err);
                 else {
-                    // docs.forEach((doc) => {
-                    //     doc.content = markdown.toHTML(doc.content);
-                    // })
                     res.send(docs);
                 }
             })
@@ -84,9 +82,11 @@ module.exports = function(app) {
                           pedantic: false,
                           sanitize: false,
                           smartLists: true,
-                          smartypants: false            
-                        });
-                        // doc.content = markdown.toHTML(doc.content);
+                          smartypants: false,
+                          highlight: function (code) {
+                            return highlightjs.highlightAuto(code).value;
+                          }
+                        });                    
                         doc.content = marked(doc.content);
                     }
                     res.send(doc);
