@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import Loading from "./Loading.js";
 
 export default class Post extends Component {
     constructor(props) {
@@ -52,7 +52,7 @@ export default class Post extends Component {
                         <div className="row">
                             {
                                 model.content ? <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" dangerouslySetInnerHTML={{__html: model.content}}></div> :
-                                    <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">Loading ... </div>
+                                    <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><Loading/></div>
                             }
                         </div>
                     </div>

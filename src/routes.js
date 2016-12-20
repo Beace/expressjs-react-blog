@@ -8,6 +8,8 @@ import Post from "./components/Post.js"
 import Abouts from "./components/About.js"
 import TextArea from "./beComponents/TextArea.js";
 import BookForm from "./beComponents/BookForm.js";
+import BookHeader from "./components/BookHeader.js";
+import Loading from "./components/Loading.js";
 import _ from "lodash";
 class App extends Component {
     render() {
@@ -62,7 +64,7 @@ class Home extends Component {
                         <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                             {
                                 models.length === 0 ? <div className="post-preview">
-                                    loading ......
+                                    <Loading/>
                                 </div> : _.map(models, function(item) {
                                     let key = item._id;
                                     return (
@@ -165,7 +167,7 @@ class Book extends Component {
     render() {
         return (
             <div>
-                <Header/>
+                <BookHeader/>
                 <BookForm/>
             </div>
         )
