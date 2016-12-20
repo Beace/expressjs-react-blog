@@ -158,6 +158,11 @@ hr.small {
   .intro-header .page-heading {
     padding: 150px 0;
   }
+  .book-header .site-heading,
+  .book-header .post-heading,
+  .book-header .page-heading {
+    padding: 100px 0 50px !important;
+  }
 }
 .intro-header .site-heading,
 .intro-header .page-heading {
