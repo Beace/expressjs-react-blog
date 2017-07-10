@@ -1,25 +1,28 @@
-var mongoose = require('../../mongo.js');
+var mongoose = require("../../mongo.js");
 var Schema = mongoose.Schema;
-var articleSchema = new Schema({
+var articleSchema = new Schema(
+  {
     author: {
-        type: String,
-        default: 'beace'
+      type: String,
+      default: "beace"
     },
     title: {
-        type: String
+      type: String
     },
     abstract: {
-        type: String
+      type: String
     },
     content: {
-        type: String
+      type: String
     },
     date: {
-        type: Date,
-        default: Date.now
+      type: Date,
+      default: Date.now
     }
-}, {
+  },
+  {
     collection: "articles"
-});
+  }
+);
 
 module.exports = articleSchema;
