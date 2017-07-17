@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Modal from "../components/Modal.js";
+import Modal from "components/Modal.js";
 export default class TextArea extends Component {
   constructor(props) {
     super(props);

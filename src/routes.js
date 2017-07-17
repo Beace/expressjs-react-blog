@@ -24,8 +24,6 @@ class App extends Component {
   }
 }
 
-
-
 class ArticleList extends Component {
   render() {
     return (

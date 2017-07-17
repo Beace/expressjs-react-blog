@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Loading from "./Loading.js";
+import Loading from "components/Loading.js";
 
 export default class Post extends Component {
   constructor(props) {
@@ -14,18 +14,15 @@ export default class Post extends Component {
     };
   }
   componentDidMount() {
-    let _this = this;
     let id = this.props.params.id;
-    fetch("/api/post/" + id).then(function(response) {
-      return response.json().then(function(json) {
-        if (json) {
-          _this.setState({
-            model: json
-          });
-        } else {
-          throw error;
-        }
-      });
+    fetch(`/api/post/${id}`).then(res => res.json()).then(model => {
+      if (model) {
+        this.setState({
+          model
+        });
+      } else {
+        throw error;
+      }
     });
   }
   render() {

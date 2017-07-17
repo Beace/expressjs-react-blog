@@ -3,6 +3,7 @@ var markdown = require("markdown").markdown;
 var articleSchema = require("../src/models/schema.js");
 var marked = require("marked");
 var highlightjs = require("highlight.js");
+
 module.exports = function(app) {
   app.get("/", function(req, res) {
     res.render("index", {

@@ -2,8 +2,8 @@ import React from "react";
 import _ from "lodash";
 import { Link, browserHistory } from "react-router";
 
-import Header from "./Header.js";
-import Loading from "./Loading.js";
+import Header from "components/Header.js";
+import Loading from "components/Loading.js";
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,18 +14,16 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    let _this = this;
-    fetch("/api/articles").then(function(response) {
-      return response.json().then(function(json) {
-        if (json) {
-          _this.setState({
-            models: json
-          });
-        } else {
-          throw error;
-        }
+    fetch("/api/articles")
+      .then(res => res.json())
+      .then(models => {
+        this.setState({
+          models
+        });
+      })
+      .catch(error => {
+        console.log(error);
       });
-    });
   }
 
   detailHandler(model) {
