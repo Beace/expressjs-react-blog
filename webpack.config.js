@@ -1,28 +1,24 @@
-var path = require("path");
-var webpack = require("webpack");
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: "public/javascripts/local/dist",
-    filename: "bundle.js"
+    path: 'public/javascripts/local/dist',
+    filename: 'bundle.js',
   },
   resolve: {
-    root: [
-      path.resolve("./src"),
-      path.resolve("./view")
-    ]
+    root: [path.resolve('./src'), path.resolve('./view')],
   },
   module: {
     loaders: [
       {
         test: /.js?$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ["es2015", "react"]
-        }
-      }
-    ]
-  }
+          presets: ['es2015', 'react'],
+        },
+      },
+    ],
+  },
 };

@@ -1,43 +1,43 @@
-import React, { Component } from "react";
-import Modal from "components/Modal.js";
+import React, { Component } from 'react';
+import Modal from 'components/Modal.js';
 export default class TextArea extends Component {
   constructor(props) {
     super(props);
     this.state = {
       model: {
-        author: "beace",
-        abstract: "",
-        title: "",
-        content: ""
+        author: 'beace',
+        abstract: '',
+        title: '',
+        content: '',
       },
       errors: {
         author: [],
         abstract: [],
         title: [],
-        content: []
-      }
+        content: [],
+      },
     };
     this.submitHandler = this.submitHandler.bind(this);
   }
 
   componentDidMount() {
-    var testEditor;
-    testEditor = editormd("myEditor", {
-      width: "100%",
+    let testEditor;
+    testEditor = editormd('myEditor', {
+      width: '100%',
       height: 640,
       emoji: true,
-      path: "../../bower_components/editor.md/lib/"
+      path: '../../bower_components/editor.md/lib/',
     });
   }
 
   onChangeField(fieldName) {
-    return function(e) {
-      let value = e.target.value;
-      let model = this.state.model;
+    return function (e) {
+      const value = e.target.value;
+      const model = this.state.model;
       model[fieldName] = value;
 
       this.setState({
-        model: model
+        model,
       });
     };
   }
@@ -46,22 +46,22 @@ export default class TextArea extends Component {
     e.preventDefault();
     let _this = this,
       model = this.state.model;
-    model.content = $(".editormd-markdown-textarea").val();
+    model.content = $('.editormd-markdown-textarea').val();
 
-    for (var i in model) {
-      if (model[i] == "" || model[i].toString().length === 0) {
+    for (const i in model) {
+      if (model[i] == '' || model[i].toString().length === 0) {
         switch (i) {
-          case "author":
-            alert("作者未填写");
+          case 'author':
+            alert('作者未填写');
             break;
-          case "abstract":
-            alert("摘要未填写");
+          case 'abstract':
+            alert('摘要未填写');
             break;
-          case "title":
-            alert("标题未填写");
+          case 'title':
+            alert('标题未填写');
             break;
-          case "content":
-            alert("内容未填写");
+          case 'content':
+            alert('内容未填写');
             break;
           default:
           // nothing
@@ -70,37 +70,37 @@ export default class TextArea extends Component {
       }
     }
 
-    fetch("/api/post", {
-      method: "POST",
+    fetch('/api/post', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(model)
+      body: JSON.stringify(model),
     }).then(
       res => {
         if (res.ok) {
-          $("#myModal").modal("show");
-          $(".editormd-markdown-textarea").text("");
+          $('#myModal').modal('show');
+          $('.editormd-markdown-textarea').text('');
           _this.setState({
             model: {
-              author: "beace",
-              abstract: "",
-              title: "",
-              content: ""
-            }
+              author: 'beace',
+              abstract: '',
+              title: '',
+              content: '',
+            },
           });
         } else if (res.status === 401) {
-          alert("Oops! You are not authorized.");
+          alert('Oops! You are not authorized.');
         }
       },
-      function(e) {
-        alert("Error submitting form!");
+      e => {
+        alert('Error submitting form!');
       }
     );
   }
 
   render() {
-    let model = this.state.model;
+    const model = this.state.model;
     return (
       <div className="container">
         <form role="form">
@@ -112,7 +112,7 @@ export default class TextArea extends Component {
               id="author"
               placeholder="作者"
               value={model.author}
-              onChange={this.onChangeField("author").bind(this)}
+              onChange={this.onChangeField('author').bind(this)}
             />
           </div>
           <div className="form-group">
@@ -123,7 +123,7 @@ export default class TextArea extends Component {
               id="title"
               placeholder="标题"
               value={model.title}
-              onChange={this.onChangeField("title").bind(this)}
+              onChange={this.onChangeField('title').bind(this)}
             />
           </div>
           <div className="form-group">
@@ -134,7 +134,7 @@ export default class TextArea extends Component {
               id="abstract"
               placeholder="摘要"
               value={model.abstract}
-              onChange={this.onChangeField("abstract").bind(this)}
+              onChange={this.onChangeField('abstract').bind(this)}
             />
           </div>
           <div className="form-group">

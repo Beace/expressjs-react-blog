@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 const Contacts = () =>
-  <div>
+  (<div>
     <header
       className="intro-header"
       style={{ backgroundImage: "url('images/contact-bg.jpg')" }}
@@ -98,6 +98,6 @@ const Contacts = () =>
         </div>
       </div>
     </div>
-  </div>;
+  </div>);
 
 export default Contacts;

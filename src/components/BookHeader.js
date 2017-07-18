@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 const BookHeader = () =>
-  <header
+  (<header
     className="intro-header book-header"
     style={{ backgroundImage: "url('images/home-bg.jpg')" }}
   >
@@ -16,6 +16,6 @@ const BookHeader = () =>
         </div>
       </div>
     </div>
-  </header>;
+  </header>);
 
 export default BookHeader;

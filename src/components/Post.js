@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Loading from "components/Loading.js";
+import React, { Component } from 'react';
+import Loading from 'components/Loading.js';
 
 export default class Post extends Component {
   constructor(props) {
@@ -9,16 +9,16 @@ export default class Post extends Component {
         author: null,
         content: null,
         title: null,
-        date: null
-      }
+        date: null,
+      },
     };
   }
   componentDidMount() {
-    let id = this.props.params.id;
+    const id = this.props.params.id;
     fetch(`/api/post/${id}`).then(res => res.json()).then(model => {
       if (model) {
         this.setState({
-          model
+          model,
         });
       } else {
         throw error;
@@ -26,7 +26,7 @@ export default class Post extends Component {
     });
   }
   render() {
-    let model = this.state.model;
+    const model = this.state.model;
     return (
       <div>
         <header className="intro-header post-header-bg">
@@ -41,8 +41,8 @@ export default class Post extends Component {
                     {model.abstract}
                   </h2>
                   <span className="meta">
-                    Posted by <a href="#">{model.author}</a> on{" "}
-                    {model.date ? model.date.substring(0, 10) : ""}
+                    Posted by <a href="#">{model.author}</a> on{' '}
+                    {model.date ? model.date.substring(0, 10) : ''}
                   </span>
                 </div>
               </div>
@@ -55,12 +55,12 @@ export default class Post extends Component {
             <div className="row">
               {model.content
                 ? <div
-                    className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"
-                    dangerouslySetInnerHTML={{ __html: model.content }}
-                  />
+                  className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"
+                  dangerouslySetInnerHTML={{ __html: model.content }}
+                />
                 : <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <Loading />
-                  </div>}
+                  <Loading />
+                </div>}
             </div>
           </div>
         </article>

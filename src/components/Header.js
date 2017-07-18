@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 
 const Header = () =>
-  <header
+  (<header
     className="intro-header"
     style={{ backgroundImage: "url('images/home-bg.jpg')" }}
   >
@@ -17,6 +17,6 @@ const Header = () =>
         </div>
       </div>
     </div>
-  </header>;
+  </header>);
 
 export default Header;

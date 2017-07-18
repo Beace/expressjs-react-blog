@@ -44,7 +44,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var _react = __webpack_require__(1);
 
@@ -69,7 +69,7 @@
 	// Routes
 
 
-	var app = document.getElementById("app");
+	var app = document.getElementById('app');
 	(0, _reactDom.render)(Routes, app);
 
 /***/ }),
@@ -27370,7 +27370,7 @@
 /* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -27446,14 +27446,14 @@
 	  }
 
 	  _createClass(App, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_Nav2.default, null),
 	        this.props.children,
-	        _react2.default.createElement("hr", null),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -27472,10 +27472,10 @@
 	  }
 
 	  _createClass(ArticleList, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_About2.default, null)
 	      );
@@ -27495,10 +27495,10 @@
 	  }
 
 	  _createClass(About, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_About2.default, null)
 	      );
@@ -27518,13 +27518,13 @@
 	  }
 
 	  _createClass(Contact, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "div",
+	          'div',
 	          null,
 	          _react2.default.createElement(_Contacts2.default, null)
 	        )
@@ -27545,16 +27545,16 @@
 	  }
 
 	  _createClass(NoMatch, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "container text-center" },
-	          "404 NOMATCH"
+	          'div',
+	          { className: 'container text-center' },
+	          '404 NOMATCH'
 	        )
 	      );
 	    }
@@ -27573,10 +27573,10 @@
 	  }
 
 	  _createClass(Admin, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
 	        _react2.default.createElement(_TextArea2.default, null)
@@ -27597,10 +27597,10 @@
 	  }
 
 	  _createClass(Book, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_BookHeader2.default, null),
 	        _react2.default.createElement(_BookForm2.default, null)
@@ -27613,25 +27613,25 @@
 
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
-	  { path: "/", component: App },
+	  { path: '/', component: App },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: "article" },
-	    _react2.default.createElement(_reactRouter.Route, { path: ":id", component: _Post2.default })
+	    { path: 'article' },
+	    _react2.default.createElement(_reactRouter.Route, { path: ':id', component: _Post2.default })
 	  ),
-	  _react2.default.createElement(_reactRouter.Route, { path: "about", component: About }),
-	  _react2.default.createElement(_reactRouter.Route, { path: "contact", component: Contact }),
-	  _react2.default.createElement(_reactRouter.Route, { path: "admin", component: Admin }),
-	  _react2.default.createElement(_reactRouter.Route, { path: "book", component: Book }),
-	  _react2.default.createElement(_reactRouter.Route, { path: "*", component: NoMatch })
+	  _react2.default.createElement(_reactRouter.Route, { path: 'about', component: About }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: Contact }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'admin', component: Admin }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'book', component: Book }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: NoMatch })
 	);
 
 /***/ }),
 /* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -27647,88 +27647,88 @@
 
 	var Nav = function Nav() {
 	  return _react2.default.createElement(
-	    "nav",
-	    { className: "navbar navbar-default navbar-custom navbar-fixed-top" },
+	    'nav',
+	    { className: 'navbar navbar-default navbar-custom navbar-fixed-top' },
 	    _react2.default.createElement(
-	      "div",
-	      { className: "container-fluid" },
+	      'div',
+	      { className: 'container-fluid' },
 	      _react2.default.createElement(
-	        "div",
-	        { className: "navbar-header page-scroll" },
+	        'div',
+	        { className: 'navbar-header page-scroll' },
 	        _react2.default.createElement(
-	          "button",
+	          'button',
 	          {
-	            type: "button",
-	            className: "navbar-toggle",
-	            "data-toggle": "collapse",
-	            "data-target": "#bs-example-navbar-collapse-1"
+	            type: 'button',
+	            className: 'navbar-toggle',
+	            'data-toggle': 'collapse',
+	            'data-target': '#bs-example-navbar-collapse-1'
 	          },
 	          _react2.default.createElement(
-	            "span",
-	            { className: "sr-only" },
-	            "Toggle navigation"
+	            'span',
+	            { className: 'sr-only' },
+	            'Toggle navigation'
 	          ),
-	          "Menu ",
-	          _react2.default.createElement("i", { className: "fa fa-bars" })
+	          'Menu ',
+	          _react2.default.createElement('i', { className: 'fa fa-bars' })
 	        ),
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { className: "navbar-brand", to: "/" },
-	          "HOME"
+	          { className: 'navbar-brand', to: '/' },
+	          'HOME'
 	        )
 	      ),
 	      _react2.default.createElement(
-	        "div",
+	        'div',
 	        {
-	          className: "collapse navbar-collapse",
-	          id: "bs-example-navbar-collapse-1"
+	          className: 'collapse navbar-collapse',
+	          id: 'bs-example-navbar-collapse-1'
 	        },
 	        _react2.default.createElement(
-	          "ul",
-	          { className: "nav navbar-nav navbar-right" },
+	          'ul',
+	          { className: 'nav navbar-nav navbar-right' },
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: "/" },
-	              "HOME"
+	              { to: '/' },
+	              'HOME'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: "/about" },
-	              "about"
+	              { to: '/about' },
+	              'about'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: "/contact" },
-	              "contact"
+	              { to: '/contact' },
+	              'contact'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: "/book" },
-	              "book"
+	              { to: '/book' },
+	              'book'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: "/work" },
-	              "work"
+	              { to: '/work' },
+	              'work'
 	            )
 	          )
 	        )
@@ -27743,7 +27743,7 @@
 /* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -27759,33 +27759,33 @@
 
 	var Header = function Header() {
 	  return _react2.default.createElement(
-	    "header",
+	    'header',
 	    {
-	      className: "intro-header",
+	      className: 'intro-header',
 	      style: { backgroundImage: "url('images/home-bg.jpg')" }
 	    },
 	    _react2.default.createElement(
-	      "div",
-	      { className: "container" },
+	      'div',
+	      { className: 'container' },
 	      _react2.default.createElement(
-	        "div",
-	        { className: "row" },
+	        'div',
+	        { className: 'row' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+	          'div',
+	          { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "site-heading" },
+	            'div',
+	            { className: 'site-heading' },
 	            _react2.default.createElement(
-	              "h1",
+	              'h1',
 	              null,
-	              "React Clean Blog"
+	              'React Clean Blog'
 	            ),
-	            _react2.default.createElement("hr", { className: "small" }),
+	            _react2.default.createElement('hr', { className: 'small' }),
 	            _react2.default.createElement(
-	              "span",
-	              { className: "subheading" },
-	              "A Clean Blog By NodeJS And React"
+	              'span',
+	              { className: 'subheading' },
+	              'A Clean Blog By NodeJS And React'
 	            )
 	          )
 	        )
@@ -27888,7 +27888,7 @@
 /* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -27937,11 +27937,11 @@
 	  }
 
 	  _createClass(Home, [{
-	    key: "componentDidMount",
+	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      var _this3 = this;
 
-	      fetch("/api/articles").then(function (res) {
+	      fetch('/api/articles').then(function (res) {
 	        return res.json();
 	      }).then(function (models) {
 	        _this3.setState({
@@ -27952,83 +27952,83 @@
 	      });
 	    }
 	  }, {
-	    key: "detailHandler",
+	    key: 'detailHandler',
 	    value: function detailHandler(model) {
 	      var id = model._id;
-	      _reactRouter.browserHistory.push("/article/" + id);
+	      _reactRouter.browserHistory.push('/article/' + id);
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      var models = this.state.models ? this.state.models : [];
 	      var _this = this;
 
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "container" },
+	          'div',
+	          { className: 'container' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "row" },
+	            'div',
+	            { className: 'row' },
 	            _react2.default.createElement(
-	              "div",
-	              { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+	              'div',
+	              { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
 	              models.length === 0 ? _react2.default.createElement(
-	                "div",
-	                { className: "post-preview" },
+	                'div',
+	                { className: 'post-preview' },
 	                _react2.default.createElement(_Loading2.default, null)
 	              ) : _lodash2.default.map(models, function (item) {
 	                var key = item._id;
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  { key: key },
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "post-preview" },
+	                    'div',
+	                    { className: 'post-preview' },
 	                    _react2.default.createElement(
-	                      "a",
+	                      'a',
 	                      { onClick: _this.detailHandler.bind(this, item) },
 	                      _react2.default.createElement(
-	                        "h2",
-	                        { className: "post-title" },
+	                        'h2',
+	                        { className: 'post-title' },
 	                        item.title
 	                      ),
 	                      _react2.default.createElement(
-	                        "h3",
-	                        { className: "post-subtitle" },
+	                        'h3',
+	                        { className: 'post-subtitle' },
 	                        item.abstract
 	                      )
 	                    ),
 	                    _react2.default.createElement(
-	                      "p",
-	                      { className: "post-meta" },
-	                      "Posted by ",
+	                      'p',
+	                      { className: 'post-meta' },
+	                      'Posted by ',
 	                      _react2.default.createElement(
-	                        "a",
-	                        { href: "#" },
+	                        'a',
+	                        { href: '#' },
 	                        item.author
 	                      ),
-	                      " on",
-	                      " ",
+	                      ' on',
+	                      ' ',
 	                      item.date ? item.date.substring(0, 10) : Date.now()
 	                    )
 	                  ),
-	                  _react2.default.createElement("hr", null)
+	                  _react2.default.createElement('hr', null)
 	                );
 	              }),
 	              _react2.default.createElement(
-	                "ul",
-	                { className: "pager" },
+	                'ul',
+	                { className: 'pager' },
 	                _react2.default.createElement(
-	                  "li",
-	                  { className: "next" },
+	                  'li',
+	                  { className: 'next' },
 	                  _react2.default.createElement(
 	                    _reactRouter.Link,
-	                    { to: "/work" },
-	                    "Older Posts \u2192"
+	                    { to: '/work' },
+	                    'Older Posts \u2192'
 	                  )
 	                )
 	              )
@@ -45368,7 +45368,7 @@
 /* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -45412,12 +45412,12 @@
 	  }
 
 	  _createClass(Post, [{
-	    key: "componentDidMount",
+	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
 	      var id = this.props.params.id;
-	      fetch("/api/post/" + id).then(function (res) {
+	      fetch('/api/post/' + id).then(function (res) {
 	        return res.json();
 	      }).then(function (model) {
 	        if (model) {
@@ -45430,49 +45430,49 @@
 	      });
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      var model = this.state.model;
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "header",
-	          { className: "intro-header post-header-bg" },
+	          'header',
+	          { className: 'intro-header post-header-bg' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "container" },
+	            'div',
+	            { className: 'container' },
 	            _react2.default.createElement(
-	              "div",
-	              { className: "row" },
+	              'div',
+	              { className: 'row' },
 	              _react2.default.createElement(
-	                "div",
-	                { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+	                'div',
+	                { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
 	                _react2.default.createElement(
-	                  "div",
-	                  { className: "post-heading" },
+	                  'div',
+	                  { className: 'post-heading' },
 	                  _react2.default.createElement(
-	                    "h1",
+	                    'h1',
 	                    null,
 	                    model.title
 	                  ),
 	                  _react2.default.createElement(
-	                    "h2",
-	                    { className: "subheading" },
+	                    'h2',
+	                    { className: 'subheading' },
 	                    model.abstract
 	                  ),
 	                  _react2.default.createElement(
-	                    "span",
-	                    { className: "meta" },
-	                    "Posted by ",
+	                    'span',
+	                    { className: 'meta' },
+	                    'Posted by ',
 	                    _react2.default.createElement(
-	                      "a",
-	                      { href: "#" },
+	                      'a',
+	                      { href: '#' },
 	                      model.author
 	                    ),
-	                    " on",
-	                    " ",
-	                    model.date ? model.date.substring(0, 10) : ""
+	                    ' on',
+	                    ' ',
+	                    model.date ? model.date.substring(0, 10) : ''
 	                  )
 	                )
 	              )
@@ -45480,20 +45480,20 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "article",
+	          'article',
 	          null,
 	          _react2.default.createElement(
-	            "div",
-	            { className: "container" },
+	            'div',
+	            { className: 'container' },
 	            _react2.default.createElement(
-	              "div",
-	              { className: "row" },
-	              model.content ? _react2.default.createElement("div", {
-	                className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1",
+	              'div',
+	              { className: 'row' },
+	              model.content ? _react2.default.createElement('div', {
+	                className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1',
 	                dangerouslySetInnerHTML: { __html: model.content }
 	              }) : _react2.default.createElement(
-	                "div",
-	                { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+	                'div',
+	                { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
 	                _react2.default.createElement(_Loading2.default, null)
 	              )
 	            )
@@ -45632,7 +45632,7 @@
 /* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -45666,10 +45666,10 @@
 
 	    _this2.state = {
 	      model: {
-	        author: "beace",
-	        abstract: "",
-	        title: "",
-	        content: ""
+	        author: 'beace',
+	        abstract: '',
+	        title: '',
+	        content: ''
 	      },
 	      errors: {
 	        author: [],
@@ -45683,18 +45683,18 @@
 	  }
 
 	  _createClass(TextArea, [{
-	    key: "componentDidMount",
+	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      var testEditor;
-	      testEditor = editormd("myEditor", {
-	        width: "100%",
+	      var testEditor = void 0;
+	      testEditor = editormd('myEditor', {
+	        width: '100%',
 	        height: 640,
 	        emoji: true,
-	        path: "../../bower_components/editor.md/lib/"
+	        path: '../../bower_components/editor.md/lib/'
 	      });
 	    }
 	  }, {
-	    key: "onChangeField",
+	    key: 'onChangeField',
 	    value: function onChangeField(fieldName) {
 	      return function (e) {
 	        var value = e.target.value;
@@ -45707,27 +45707,27 @@
 	      };
 	    }
 	  }, {
-	    key: "submitHandler",
+	    key: 'submitHandler',
 	    value: function submitHandler(e) {
 	      e.preventDefault();
 	      var _this = this,
 	          model = this.state.model;
-	      model.content = $(".editormd-markdown-textarea").val();
+	      model.content = $('.editormd-markdown-textarea').val();
 
 	      for (var i in model) {
-	        if (model[i] == "" || model[i].toString().length === 0) {
+	        if (model[i] == '' || model[i].toString().length === 0) {
 	          switch (i) {
-	            case "author":
-	              alert("作者未填写");
+	            case 'author':
+	              alert('作者未填写');
 	              break;
-	            case "abstract":
-	              alert("摘要未填写");
+	            case 'abstract':
+	              alert('摘要未填写');
 	              break;
-	            case "title":
-	              alert("标题未填写");
+	            case 'title':
+	              alert('标题未填写');
 	              break;
-	            case "content":
-	              alert("内容未填写");
+	            case 'content':
+	              alert('内容未填写');
 	              break;
 	            default:
 	            // nothing
@@ -45736,106 +45736,106 @@
 	        }
 	      }
 
-	      fetch("/api/post", {
-	        method: "POST",
+	      fetch('/api/post', {
+	        method: 'POST',
 	        headers: {
-	          "Content-Type": "application/json"
+	          'Content-Type': 'application/json'
 	        },
 	        body: JSON.stringify(model)
 	      }).then(function (res) {
 	        if (res.ok) {
-	          $("#myModal").modal("show");
-	          $(".editormd-markdown-textarea").text("");
+	          $('#myModal').modal('show');
+	          $('.editormd-markdown-textarea').text('');
 	          _this.setState({
 	            model: {
-	              author: "beace",
-	              abstract: "",
-	              title: "",
-	              content: ""
+	              author: 'beace',
+	              abstract: '',
+	              title: '',
+	              content: ''
 	            }
 	          });
 	        } else if (res.status === 401) {
-	          alert("Oops! You are not authorized.");
+	          alert('Oops! You are not authorized.');
 	        }
 	      }, function (e) {
-	        alert("Error submitting form!");
+	        alert('Error submitting form!');
 	      });
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      var model = this.state.model;
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "container" },
+	        'div',
+	        { className: 'container' },
 	        _react2.default.createElement(
-	          "form",
-	          { role: "form" },
+	          'form',
+	          { role: 'form' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form-group" },
+	            'div',
+	            { className: 'form-group' },
 	            _react2.default.createElement(
-	              "label",
-	              { htmlFor: "author" },
-	              "\u4F5C\u8005"
+	              'label',
+	              { htmlFor: 'author' },
+	              '\u4F5C\u8005'
 	            ),
-	            _react2.default.createElement("input", {
-	              type: "text",
-	              className: "form-control",
-	              id: "author",
-	              placeholder: "\u4F5C\u8005",
+	            _react2.default.createElement('input', {
+	              type: 'text',
+	              className: 'form-control',
+	              id: 'author',
+	              placeholder: '\u4F5C\u8005',
 	              value: model.author,
-	              onChange: this.onChangeField("author").bind(this)
+	              onChange: this.onChangeField('author').bind(this)
 	            })
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form-group" },
+	            'div',
+	            { className: 'form-group' },
 	            _react2.default.createElement(
-	              "label",
-	              { htmlFor: "title" },
-	              "\u6807\u9898"
+	              'label',
+	              { htmlFor: 'title' },
+	              '\u6807\u9898'
 	            ),
-	            _react2.default.createElement("input", {
-	              type: "text",
-	              className: "form-control",
-	              id: "title",
-	              placeholder: "\u6807\u9898",
+	            _react2.default.createElement('input', {
+	              type: 'text',
+	              className: 'form-control',
+	              id: 'title',
+	              placeholder: '\u6807\u9898',
 	              value: model.title,
-	              onChange: this.onChangeField("title").bind(this)
+	              onChange: this.onChangeField('title').bind(this)
 	            })
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form-group" },
+	            'div',
+	            { className: 'form-group' },
 	            _react2.default.createElement(
-	              "label",
-	              { htmlFor: "abstract" },
-	              "\u6458\u8981"
+	              'label',
+	              { htmlFor: 'abstract' },
+	              '\u6458\u8981'
 	            ),
-	            _react2.default.createElement("input", {
-	              type: "text",
-	              className: "form-control",
-	              id: "abstract",
-	              placeholder: "\u6458\u8981",
+	            _react2.default.createElement('input', {
+	              type: 'text',
+	              className: 'form-control',
+	              id: 'abstract',
+	              placeholder: '\u6458\u8981',
 	              value: model.abstract,
-	              onChange: this.onChangeField("abstract").bind(this)
+	              onChange: this.onChangeField('abstract').bind(this)
 	            })
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form-group" },
+	            'div',
+	            { className: 'form-group' },
 	            _react2.default.createElement(
-	              "label",
-	              { htmlFor: "content" },
-	              "\u5185\u5BB9"
+	              'label',
+	              { htmlFor: 'content' },
+	              '\u5185\u5BB9'
 	            ),
-	            _react2.default.createElement("div", { id: "myEditor" })
+	            _react2.default.createElement('div', { id: 'myEditor' })
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { className: "btn btn-default", onClick: this.submitHandler },
-	            "\u63D0\u4EA4"
+	            'button',
+	            { className: 'btn btn-default', onClick: this.submitHandler },
+	            '\u63D0\u4EA4'
 	          )
 	        ),
 	        _react2.default.createElement(_Modal2.default, null)
@@ -45956,7 +45956,7 @@
 /* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -45990,51 +45990,51 @@
 
 	    _this.state = {
 	      model: {
-	        //专著、论文集、学术论文、报告
-	        bookType: "M",
-	        author: "",
-	        name: "",
-	        address: "",
-	        bookPerson: "",
-	        bookYear: "",
+	        // 专著、论文集、学术论文、报告
+	        bookType: 'M',
+	        author: '',
+	        name: '',
+	        address: '',
+	        bookPerson: '',
+	        bookYear: '',
 	        pageStart: 0,
 	        pageEnd: 0,
-	        //期刊文章
-	        journalAuthor: "",
-	        journalTitle: "",
-	        journalName: "",
-	        journalYear: "",
-	        journalPaper: "",
-	        journalStage: "",
+	        // 期刊文章
+	        journalAuthor: '',
+	        journalTitle: '',
+	        journalName: '',
+	        journalYear: '',
+	        journalPaper: '',
+	        journalStage: '',
 	        journalPageStart: 0,
 	        journalPageEnd: 0,
-	        //报纸文章
-	        paperAuthor: "",
-	        paperTitle: "",
-	        paperName: "",
-	        paperDate: "",
-	        paperTimes: "",
-	        //国际、国家标准
-	        standardNo: "",
-	        standardName: "",
-	        //专利
-	        patentPerson: "",
-	        patentName: "",
-	        patentCountry: "",
-	        patentNo: "",
-	        patentDate: "",
-	        //电子文献
-	        ePerson: "",
-	        eName: "",
-	        eUrl: "",
-	        eStartDate: "",
-	        eEndDate: "",
-	        //各种未定义的文献
-	        unPerson: "",
-	        unName: "",
-	        unAddress: "",
-	        unAuthor: "",
-	        unYear: ""
+	        // 报纸文章
+	        paperAuthor: '',
+	        paperTitle: '',
+	        paperName: '',
+	        paperDate: '',
+	        paperTimes: '',
+	        // 国际、国家标准
+	        standardNo: '',
+	        standardName: '',
+	        // 专利
+	        patentPerson: '',
+	        patentName: '',
+	        patentCountry: '',
+	        patentNo: '',
+	        patentDate: '',
+	        // 电子文献
+	        ePerson: '',
+	        eName: '',
+	        eUrl: '',
+	        eStartDate: '',
+	        eEndDate: '',
+	        // 各种未定义的文献
+	        unPerson: '',
+	        unName: '',
+	        unAddress: '',
+	        unAuthor: '',
+	        unYear: ''
 	      },
 	      bookModel: []
 	    };
@@ -46044,7 +46044,7 @@
 	  }
 
 	  _createClass(BookForm, [{
-	    key: "onChangeField",
+	    key: 'onChangeField',
 	    value: function onChangeField(fieldName) {
 	      return function (e) {
 	        var value = e.target.value;
@@ -46057,48 +46057,48 @@
 	      };
 	    }
 	  }, {
-	    key: "submitHandler",
+	    key: 'submitHandler',
 	    value: function submitHandler(e) {
 	      e.preventDefault();
 	      var model = this.state.model;
 	      console.log(model);
 	      var bookModel = this.state.bookModel;
-	      var tempString = "";
+	      var tempString = '';
 	      switch (model.bookType) {
-	        case "M":
-	        case "C":
-	        case "D":
-	        case "R":
-	          tempString = model.name + "." + model.author + "[" + model.bookType + "]." + model.address + ":" + model.bookPerson + ", " + model.bookYear + "." + model.pageStart + "-" + model.pageEnd;
+	        case 'M':
+	        case 'C':
+	        case 'D':
+	        case 'R':
+	          tempString = model.name + '.' + model.author + '[' + model.bookType + '].' + model.address + ':' + model.bookPerson + ', ' + model.bookYear + '.' + model.pageStart + '-' + model.pageEnd;
 	          break;
-	        case "J":
-	          tempString = model.journalAuthor + ". " + model.journalTitle + "[" + model.bookType + "]." + model.journalName + ", " + model.journalYear + "," + model.journalPaper + "(" + model.journalStage + "): " + model.journalPageStart + "-" + model.journalPageEnd + ".";
+	        case 'J':
+	          tempString = model.journalAuthor + '. ' + model.journalTitle + '[' + model.bookType + '].' + model.journalName + ', ' + model.journalYear + ',' + model.journalPaper + '(' + model.journalStage + '): ' + model.journalPageStart + '-' + model.journalPageEnd + '.';
 	          break;
-	        case "N":
-	          tempString = model.paperAuthor + "." + model.paperTitle + "[" + model.bookType + "]." + model.paperName + ", " + model.paperDate + "(" + model.paperTimes + ").";
+	        case 'N':
+	          tempString = model.paperAuthor + '.' + model.paperTitle + '[' + model.bookType + '].' + model.paperName + ', ' + model.paperDate + '(' + model.paperTimes + ').';
 	          break;
-	        case "S":
-	          tempString = model.standardNo + "," + model.standardName + "[" + model.bookType + "].";
+	        case 'S':
+	          tempString = model.standardNo + ',' + model.standardName + '[' + model.bookType + '].';
 	          break;
-	        case "P":
-	          tempString = model.patentPerson + "." + model.patentName + "[" + model.bookType + "]." + model.patentCountry + ": " + model.patentNo + "," + model.patentDate + ".";
+	        case 'P':
+	          tempString = model.patentPerson + '.' + model.patentName + '[' + model.bookType + '].' + model.patentCountry + ': ' + model.patentNo + ',' + model.patentDate + '.';
 	          break;
-	        case "EB/OL":
+	        case 'EB/OL':
 	          if (model.eEndDate.toString().length === 0) {
-	            tempString = model.ePerson + "." + model.eName + "[" + model.bookType + "]." + model.eUrl + "," + model.eStartDate;
+	            tempString = model.ePerson + '.' + model.eName + '[' + model.bookType + '].' + model.eUrl + ',' + model.eStartDate;
 	          } else if (model.eStartDate.toString().length === 0) {
-	            tempString = model.ePerson + "." + model.eName + "[" + model.bookType + "]." + model.eUrl + "," + model.eEndDate;
+	            tempString = model.ePerson + '.' + model.eName + '[' + model.bookType + '].' + model.eUrl + ',' + model.eEndDate;
 	          } else if (model.eEndDate.toString().length === 0 && model.eStartDate.toString().length === 0) {
-	            tempString = model.ePerson + "." + model.eName + "[" + model.bookType + "]." + model.eUrl + ".";
+	            tempString = model.ePerson + '.' + model.eName + '[' + model.bookType + '].' + model.eUrl + '.';
 	          } else {
-	            tempString = model.ePerson + "." + model.eName + "[" + model.bookType + "]." + model.eUrl + "," + model.eStartDate + "-" + model.eEndDate;
+	            tempString = model.ePerson + '.' + model.eName + '[' + model.bookType + '].' + model.eUrl + ',' + model.eStartDate + '-' + model.eEndDate;
 	          }
 	          break;
-	        case "Z":
-	          tempString = model.unPerson + "." + model.unName + "[" + model.bookType + "]." + model.unAddress + ": " + model.unAuthor + "," + model.unYear;
+	        case 'Z':
+	          tempString = model.unPerson + '.' + model.unName + '[' + model.bookType + '].' + model.unAddress + ': ' + model.unAuthor + ',' + model.unYear;
 	          break;
 	        default:
-	        //nothing
+	        // nothing
 	      }
 	      bookModel.push({
 	        id: _lodash2.default.uniqueId(),
@@ -46109,7 +46109,7 @@
 	      });
 	    }
 	  }, {
-	    key: "resetHandler",
+	    key: 'resetHandler',
 	    value: function resetHandler(e) {
 	      e.preventDefault();
 	      var bookModel = this.state.bookModel;
@@ -46118,872 +46118,872 @@
 	      });
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
 
 	      var model = this.state.model;
 	      var bookModel = this.state.bookModel;
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "container" },
+	        'div',
+	        { className: 'container' },
 	        _react2.default.createElement(
-	          "form",
-	          { role: "form" },
+	          'form',
+	          { role: 'form' },
 	          _react2.default.createElement(
-	            "h3",
+	            'h3',
 	            null,
-	            "\u6DFB\u52A0\u65B0\u6587\u732E"
+	            '\u6DFB\u52A0\u65B0\u6587\u732E'
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form-group" },
+	            'div',
+	            { className: 'form-group' },
 	            _react2.default.createElement(
-	              "label",
-	              { htmlFor: "author" },
-	              "\u6587\u732E\u79CD\u7C7B"
+	              'label',
+	              { htmlFor: 'author' },
+	              '\u6587\u732E\u79CD\u7C7B'
 	            ),
 	            _react2.default.createElement(
-	              "select",
+	              'select',
 	              {
-	                className: "form-control",
+	                className: 'form-control',
 	                value: model.bookType,
-	                onChange: this.onChangeField("bookType").bind(this)
+	                onChange: this.onChangeField('bookType').bind(this)
 	              },
 	              _react2.default.createElement(
-	                "option",
-	                { value: "M" },
-	                "\u4E13\u8457"
+	                'option',
+	                { value: 'M' },
+	                '\u4E13\u8457'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "C" },
-	                "\u8BBA\u6587\u96C6"
+	                'option',
+	                { value: 'C' },
+	                '\u8BBA\u6587\u96C6'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "D" },
-	                "\u5B66\u4F4D\u8BBA\u6587"
+	                'option',
+	                { value: 'D' },
+	                '\u5B66\u4F4D\u8BBA\u6587'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "R" },
-	                "\u62A5\u544A"
+	                'option',
+	                { value: 'R' },
+	                '\u62A5\u544A'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "J" },
-	                "\u671F\u520A\u6587\u7AE0"
+	                'option',
+	                { value: 'J' },
+	                '\u671F\u520A\u6587\u7AE0'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "N" },
-	                "\u62A5\u7EB8\u6587\u7AE0"
+	                'option',
+	                { value: 'N' },
+	                '\u62A5\u7EB8\u6587\u7AE0'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "S" },
-	                "\u56FD\u9645\u3001\u56FD\u5BB6\u6807\u51C6"
+	                'option',
+	                { value: 'S' },
+	                '\u56FD\u9645\u3001\u56FD\u5BB6\u6807\u51C6'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "P" },
-	                "\u4E13\u5229"
+	                'option',
+	                { value: 'P' },
+	                '\u4E13\u5229'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "EB/OL" },
-	                "\u7535\u5B50\u6587\u732E"
+	                'option',
+	                { value: 'EB/OL' },
+	                '\u7535\u5B50\u6587\u732E'
 	              ),
 	              _react2.default.createElement(
-	                "option",
-	                { value: "Z" },
-	                "\u5404\u79CD\u672A\u5B9A\u4E49\u7C7B\u578B\u7684\u6587\u732E"
+	                'option',
+	                { value: 'Z' },
+	                '\u5404\u79CD\u672A\u5B9A\u4E49\u7C7B\u578B\u7684\u6587\u732E'
 	              )
 	            )
 	          ),
 	          function () {
 	            switch (model.bookType) {
-	              case "M":
-	              case "C":
-	              case "D":
-	              case "R":
+	              case 'M':
+	              case 'C':
+	              case 'D':
+	              case 'R':
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  null,
 	                  _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "\u4E13\u8457\u3001\u8BBA\u6587\u96C6\u3001\u5B66\u4F4D\u8BBA\u6587\u3001\u62A5\u544A\uFF1A"
+	                    '\u4E13\u8457\u3001\u8BBA\u6587\u96C6\u3001\u5B66\u4F4D\u8BBA\u6587\u3001\u62A5\u544A\uFF1A'
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E3B\u8981\u8D23\u4EFB\u8005"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E3B\u8981\u8D23\u4EFB\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E3B\u8981\u8D23\u4EFB\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E3B\u8981\u8D23\u4EFB\u8005',
 	                      value: model.author,
-	                      onChange: _this2.onChangeField("author").bind(_this2)
+	                      onChange: _this2.onChangeField('author').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u6587\u732E\u9898\u540D"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u6587\u732E\u9898\u540D'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u6587\u732E\u9898\u540D",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u6587\u732E\u9898\u540D',
 	                      value: model.name,
-	                      onChange: _this2.onChangeField("name").bind(_this2)
+	                      onChange: _this2.onChangeField('name').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u51FA\u7248\u5730"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u51FA\u7248\u5730'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u5730",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u5730',
 	                      value: model.address,
-	                      onChange: _this2.onChangeField("address").bind(_this2)
+	                      onChange: _this2.onChangeField('address').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u51FA\u7248\u8005"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u51FA\u7248\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u8005',
 	                      value: model.bookPerson,
-	                      onChange: _this2.onChangeField("bookPerson").bind(_this2)
+	                      onChange: _this2.onChangeField('bookPerson').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u51FA\u7248\u5E74"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u51FA\u7248\u5E74'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u5E74",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u5E74',
 	                      value: model.bookYear,
-	                      onChange: _this2.onChangeField("bookYear").bind(_this2)
+	                      onChange: _this2.onChangeField('bookYear').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u8D77\u59CB\u9875\u7801"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u8D77\u59CB\u9875\u7801'
 	                    ),
 	                    _react2.default.createElement(
-	                      "div",
-	                      { className: "input-group" },
-	                      _react2.default.createElement("input", {
-	                        type: "text",
-	                        className: "form-control",
+	                      'div',
+	                      { className: 'input-group' },
+	                      _react2.default.createElement('input', {
+	                        type: 'text',
+	                        className: 'form-control',
 	                        value: model.pageStart,
-	                        onChange: _this2.onChangeField("pageStart").bind(_this2)
+	                        onChange: _this2.onChangeField('pageStart').bind(_this2)
 	                      }),
 	                      _react2.default.createElement(
-	                        "span",
-	                        { className: "input-group-addon" },
-	                        "\u9875"
+	                        'span',
+	                        { className: 'input-group-addon' },
+	                        '\u9875'
 	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u7EC8\u6B62\u9875\u7801"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u7EC8\u6B62\u9875\u7801'
 	                    ),
 	                    _react2.default.createElement(
-	                      "div",
-	                      { className: "input-group" },
-	                      _react2.default.createElement("input", {
-	                        type: "text",
-	                        className: "form-control",
+	                      'div',
+	                      { className: 'input-group' },
+	                      _react2.default.createElement('input', {
+	                        type: 'text',
+	                        className: 'form-control',
 	                        value: model.pageEnd,
-	                        onChange: _this2.onChangeField("pageEnd").bind(_this2)
+	                        onChange: _this2.onChangeField('pageEnd').bind(_this2)
 	                      }),
 	                      _react2.default.createElement(
-	                        "span",
-	                        { className: "input-group-addon" },
-	                        "\u9875"
+	                        'span',
+	                        { className: 'input-group-addon' },
+	                        '\u9875'
 	                      )
 	                    )
 	                  )
 	                );
-	              case "J":
+	              case 'J':
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  null,
 	                  _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "\u671F\u520A\u6587\u7AE0\uFF1A"
+	                    '\u671F\u520A\u6587\u7AE0\uFF1A'
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E3B\u8981\u8D23\u4EFB\u8005"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E3B\u8981\u8D23\u4EFB\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E3B\u8981\u8D23\u4EFB\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E3B\u8981\u8D23\u4EFB\u8005',
 	                      value: model.journalAuthor,
-	                      onChange: _this2.onChangeField("journalAuthor").bind(_this2)
+	                      onChange: _this2.onChangeField('journalAuthor').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u6587\u732E\u63D0\u540D"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u6587\u732E\u63D0\u540D'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u6587\u732E\u63D0\u540D",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u6587\u732E\u63D0\u540D',
 	                      value: model.journalTitle,
-	                      onChange: _this2.onChangeField("journalTitle").bind(_this2)
+	                      onChange: _this2.onChangeField('journalTitle').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u520A\u540D"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u520A\u540D'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u520A\u540D",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u520A\u540D',
 	                      value: model.journalName,
-	                      onChange: _this2.onChangeField("journalName").bind(_this2)
+	                      onChange: _this2.onChangeField('journalName').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u5E74"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u5E74'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u5E74",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u5E74',
 	                      value: model.journalYear,
-	                      onChange: _this2.onChangeField("journalYear").bind(_this2)
+	                      onChange: _this2.onChangeField('journalYear').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u5377"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u5377'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u5377",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u5377',
 	                      value: model.journalPaper,
-	                      onChange: _this2.onChangeField("journalPaper").bind(_this2)
+	                      onChange: _this2.onChangeField('journalPaper').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u671F"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u671F'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u671F",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u671F',
 	                      value: model.journalStage,
-	                      onChange: _this2.onChangeField("journalStage").bind(_this2)
+	                      onChange: _this2.onChangeField('journalStage').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u8D77\u59CB\u9875\u7801"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u8D77\u59CB\u9875\u7801'
 	                    ),
 	                    _react2.default.createElement(
-	                      "div",
-	                      { className: "input-group" },
-	                      _react2.default.createElement("input", {
-	                        type: "text",
-	                        className: "form-control",
+	                      'div',
+	                      { className: 'input-group' },
+	                      _react2.default.createElement('input', {
+	                        type: 'text',
+	                        className: 'form-control',
 	                        value: model.journalPageStart,
-	                        onChange: _this2.onChangeField("journalPageStart").bind(_this2)
+	                        onChange: _this2.onChangeField('journalPageStart').bind(_this2)
 	                      }),
 	                      _react2.default.createElement(
-	                        "span",
-	                        { className: "input-group-addon" },
-	                        "\u9875"
+	                        'span',
+	                        { className: 'input-group-addon' },
+	                        '\u9875'
 	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "abstract" },
-	                      "\u7EC8\u6B62\u9875\u7801"
+	                      'label',
+	                      { htmlFor: 'abstract' },
+	                      '\u7EC8\u6B62\u9875\u7801'
 	                    ),
 	                    _react2.default.createElement(
-	                      "div",
-	                      { className: "input-group" },
-	                      _react2.default.createElement("input", {
-	                        type: "text",
-	                        className: "form-control",
+	                      'div',
+	                      { className: 'input-group' },
+	                      _react2.default.createElement('input', {
+	                        type: 'text',
+	                        className: 'form-control',
 	                        value: model.journalPageEnd,
-	                        onChange: _this2.onChangeField("journalPageEnd").bind(_this2)
+	                        onChange: _this2.onChangeField('journalPageEnd').bind(_this2)
 	                      }),
 	                      _react2.default.createElement(
-	                        "span",
-	                        { className: "input-group-addon" },
-	                        "\u9875"
+	                        'span',
+	                        { className: 'input-group-addon' },
+	                        '\u9875'
 	                      )
 	                    )
 	                  )
 	                );
-	              case "N":
+	              case 'N':
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  null,
 	                  _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "\u62A5\u7EB8\u6587\u7AE0\uFF1A"
+	                    '\u62A5\u7EB8\u6587\u7AE0\uFF1A'
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E3B\u8981\u8D23\u4EFB\u8005"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E3B\u8981\u8D23\u4EFB\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E3B\u8981\u8D23\u4EFB\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E3B\u8981\u8D23\u4EFB\u8005',
 	                      value: model.paperAuthor,
-	                      onChange: _this2.onChangeField("paperAuthor").bind(_this2)
+	                      onChange: _this2.onChangeField('paperAuthor').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u6587\u732E\u63D0\u540D"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u6587\u732E\u63D0\u540D'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u6587\u732E\u63D0\u540D",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u6587\u732E\u63D0\u540D',
 	                      value: model.paperTitle,
-	                      onChange: _this2.onChangeField("paperTitle").bind(_this2)
+	                      onChange: _this2.onChangeField('paperTitle').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u62A5\u7EB8\u540D"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u62A5\u7EB8\u540D'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u62A5\u7EB8\u540D",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u62A5\u7EB8\u540D',
 	                      value: model.paperName,
-	                      onChange: _this2.onChangeField("paperName").bind(_this2)
+	                      onChange: _this2.onChangeField('paperName').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u51FA\u7248\u65E5\u671F"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u51FA\u7248\u65E5\u671F'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u65E5\u671F",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u65E5\u671F',
 	                      value: model.paperDate,
-	                      onChange: _this2.onChangeField("paperDate").bind(_this2)
+	                      onChange: _this2.onChangeField('paperDate').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u7248\u6B21"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u7248\u6B21'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u7248\u6B21",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u7248\u6B21',
 	                      value: model.paperTimes,
-	                      onChange: _this2.onChangeField("paperTimes").bind(_this2)
+	                      onChange: _this2.onChangeField('paperTimes').bind(_this2)
 	                    })
 	                  )
 	                );
-	              case "S":
+	              case 'S':
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  null,
 	                  _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "\u56FD\u9645\u3001\u56FD\u5BB6\u6807\u51C6\uFF1A"
+	                    '\u56FD\u9645\u3001\u56FD\u5BB6\u6807\u51C6\uFF1A'
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u6807\u51C6\u7F16\u53F7"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u6807\u51C6\u7F16\u53F7'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u6807\u51C6\u7F16\u53F7",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u6807\u51C6\u7F16\u53F7',
 	                      value: model.standardNo,
-	                      onChange: _this2.onChangeField("standardNo").bind(_this2)
+	                      onChange: _this2.onChangeField('standardNo').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u6807\u51C6\u540D\u79F0"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u6807\u51C6\u540D\u79F0'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u6807\u51C6\u540D\u79F0",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u6807\u51C6\u540D\u79F0',
 	                      value: model.standardName,
-	                      onChange: _this2.onChangeField("standardName").bind(_this2)
+	                      onChange: _this2.onChangeField('standardName').bind(_this2)
 	                    })
 	                  )
 	                );
-	              case "P":
+	              case 'P':
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  null,
 	                  _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "\u4E13\u5229\uFF1A"
+	                    '\u4E13\u5229\uFF1A'
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E13\u5229\u6240\u6709\u8005"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E13\u5229\u6240\u6709\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E13\u5229\u6240\u6709\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E13\u5229\u6240\u6709\u8005',
 	                      value: model.patentPerson,
-	                      onChange: _this2.onChangeField("patentPerson").bind(_this2)
+	                      onChange: _this2.onChangeField('patentPerson').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u6807\u51C6\u540D\u79F0"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u6807\u51C6\u540D\u79F0'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u6807\u51C6\u540D\u79F0",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u6807\u51C6\u540D\u79F0',
 	                      value: model.patentName,
-	                      onChange: _this2.onChangeField("patentName").bind(_this2)
+	                      onChange: _this2.onChangeField('patentName').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E13\u5229\u56FD\u522B"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E13\u5229\u56FD\u522B'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E13\u5229\u56FD\u522B",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E13\u5229\u56FD\u522B',
 	                      value: model.patentCountry,
-	                      onChange: _this2.onChangeField("patentCountry").bind(_this2)
+	                      onChange: _this2.onChangeField('patentCountry').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E13\u5229\u53F7"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E13\u5229\u53F7'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E13\u5229\u53F7",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E13\u5229\u53F7',
 	                      value: model.patentNo,
-	                      onChange: _this2.onChangeField("patentNo").bind(_this2)
+	                      onChange: _this2.onChangeField('patentNo').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u51FA\u7248\u65E5\u671F"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u51FA\u7248\u65E5\u671F'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u65E5\u671F",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u65E5\u671F',
 	                      value: model.patentDate,
-	                      onChange: _this2.onChangeField("patentDate").bind(_this2)
+	                      onChange: _this2.onChangeField('patentDate').bind(_this2)
 	                    })
 	                  )
 	                );
-	              case "EB/OL":
+	              case 'EB/OL':
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  null,
 	                  _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "\u7535\u5B50\u6587\u732E\uFF1A"
+	                    '\u7535\u5B50\u6587\u732E\uFF1A'
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "author" },
-	                      "\u7535\u5B50\u6587\u732E\u7C7B\u578B"
+	                      'label',
+	                      { htmlFor: 'author' },
+	                      '\u7535\u5B50\u6587\u732E\u7C7B\u578B'
 	                    ),
 	                    _react2.default.createElement(
-	                      "select",
+	                      'select',
 	                      {
-	                        className: "form-control",
+	                        className: 'form-control',
 	                        value: model.eType,
-	                        onChange: _this2.onChangeField("eType").bind(_this2)
+	                        onChange: _this2.onChangeField('eType').bind(_this2)
 	                      },
 	                      _react2.default.createElement(
-	                        "option",
-	                        { value: "M" },
-	                        "\u4E00\u822C\u7F51\u5740"
+	                        'option',
+	                        { value: 'M' },
+	                        '\u4E00\u822C\u7F51\u5740'
 	                      ),
 	                      _react2.default.createElement(
-	                        "option",
-	                        { value: "C" },
-	                        "\u7F51\u4E0A\u7535\u5B50\u516C\u544A"
+	                        'option',
+	                        { value: 'C' },
+	                        '\u7F51\u4E0A\u7535\u5B50\u516C\u544A'
 	                      ),
 	                      _react2.default.createElement(
-	                        "option",
-	                        { value: "D" },
-	                        "\u7F51\u4E0A\u671F\u520A"
+	                        'option',
+	                        { value: 'D' },
+	                        '\u7F51\u4E0A\u671F\u520A'
 	                      ),
 	                      _react2.default.createElement(
-	                        "option",
-	                        { value: "R" },
-	                        "\u8054\u673A\u7F51\u4E0A\u6570\u636E\u5E93"
+	                        'option',
+	                        { value: 'R' },
+	                        '\u8054\u673A\u7F51\u4E0A\u6570\u636E\u5E93'
 	                      ),
 	                      _react2.default.createElement(
-	                        "option",
-	                        { value: "J" },
-	                        "\u78C1\u5E26\u6570\u636E\u5E93"
+	                        'option',
+	                        { value: 'J' },
+	                        '\u78C1\u5E26\u6570\u636E\u5E93'
 	                      ),
 	                      _react2.default.createElement(
-	                        "option",
-	                        { value: "" },
-	                        "\u5149\u76D8\u56FE\u4E66"
+	                        'option',
+	                        { value: '' },
+	                        '\u5149\u76D8\u56FE\u4E66'
 	                      ),
 	                      _react2.default.createElement(
-	                        "option",
-	                        { value: "N" },
-	                        "\u5149\u76D8\u6570\u636E\u5E93"
+	                        'option',
+	                        { value: 'N' },
+	                        '\u5149\u76D8\u6570\u636E\u5E93'
 	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E3B\u8981\u8D23\u4EFB\u8005"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E3B\u8981\u8D23\u4EFB\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E3B\u8981\u8D23\u4EFB\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E3B\u8981\u8D23\u4EFB\u8005',
 	                      value: model.ePerson,
-	                      onChange: _this2.onChangeField("ePerson").bind(_this2)
+	                      onChange: _this2.onChangeField('ePerson').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u7535\u5B50\u6587\u732E\u9898\u540D"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u7535\u5B50\u6587\u732E\u9898\u540D'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u7535\u5B50\u6587\u732E\u9898\u540D",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u7535\u5B50\u6587\u732E\u9898\u540D',
 	                      value: model.eName,
-	                      onChange: _this2.onChangeField("eName").bind(_this2)
+	                      onChange: _this2.onChangeField('eName').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u7535\u5B50\u6587\u732E\u7684\u51FA\u5904\u6216\u53EF\u83B7\u5F97\u5730\u5740"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u7535\u5B50\u6587\u732E\u7684\u51FA\u5904\u6216\u53EF\u83B7\u5F97\u5730\u5740'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u7535\u5B50\u6587\u732E\u7684\u51FA\u5904\u6216\u53EF\u83B7\u5F97\u5730\u5740",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u7535\u5B50\u6587\u732E\u7684\u51FA\u5904\u6216\u53EF\u83B7\u5F97\u5730\u5740',
 	                      value: model.eUrl,
-	                      onChange: _this2.onChangeField("eUrl").bind(_this2)
+	                      onChange: _this2.onChangeField('eUrl').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u53D1\u8868\u6216\u66F4\u65B0\u65E5\u671F"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u53D1\u8868\u6216\u66F4\u65B0\u65E5\u671F'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u53D1\u8868\u6216\u66F4\u65B0\u65E5\u671F",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u53D1\u8868\u6216\u66F4\u65B0\u65E5\u671F',
 	                      value: model.eStartDate,
-	                      onChange: _this2.onChangeField("eStartDate").bind(_this2)
+	                      onChange: _this2.onChangeField('eStartDate').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u5F15\u7528\u65E5\u671F"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u5F15\u7528\u65E5\u671F'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u5F15\u7528\u65E5\u671F",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u5F15\u7528\u65E5\u671F',
 	                      value: model.eEndDate,
-	                      onChange: _this2.onChangeField("eEndDate").bind(_this2)
+	                      onChange: _this2.onChangeField('eEndDate').bind(_this2)
 	                    })
 	                  )
 	                );
-	              case "Z":
+	              case 'Z':
 	                return _react2.default.createElement(
-	                  "div",
+	                  'div',
 	                  null,
 	                  _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "\u5404\u79CD\u672A\u5B9A\u4E49\u7C7B\u578B\u7684\u6587\u732E\uFF1A"
+	                    '\u5404\u79CD\u672A\u5B9A\u4E49\u7C7B\u578B\u7684\u6587\u732E\uFF1A'
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u4E3B\u8981\u8D23\u4EFB\u8005"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u4E3B\u8981\u8D23\u4EFB\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u4E3B\u8981\u8D23\u4EFB\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u4E3B\u8981\u8D23\u4EFB\u8005',
 	                      value: model.unPerson,
-	                      onChange: _this2.onChangeField("unPerson").bind(_this2)
+	                      onChange: _this2.onChangeField('unPerson').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u6587\u732E\u9898\u540D"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u6587\u732E\u9898\u540D'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u6587\u732E\u9898\u540D",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u6587\u732E\u9898\u540D',
 	                      value: model.unName,
-	                      onChange: _this2.onChangeField("unName").bind(_this2)
+	                      onChange: _this2.onChangeField('unName').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u51FA\u7248\u5730"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u51FA\u7248\u5730'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u5730",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u5730',
 	                      value: model.unAddress,
-	                      onChange: _this2.onChangeField("unAddress").bind(_this2)
+	                      onChange: _this2.onChangeField('unAddress').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u51FA\u7248\u8005"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u51FA\u7248\u8005'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u8005",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u8005',
 	                      value: model.unAuthor,
-	                      onChange: _this2.onChangeField("unAuthor").bind(_this2)
+	                      onChange: _this2.onChangeField('unAuthor').bind(_this2)
 	                    })
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "form-group" },
+	                    'div',
+	                    { className: 'form-group' },
 	                    _react2.default.createElement(
-	                      "label",
-	                      { htmlFor: "title" },
-	                      "\u51FA\u7248\u5E74"
+	                      'label',
+	                      { htmlFor: 'title' },
+	                      '\u51FA\u7248\u5E74'
 	                    ),
-	                    _react2.default.createElement("input", {
-	                      type: "text",
-	                      className: "form-control",
-	                      placeholder: "\u51FA\u7248\u5E74",
+	                    _react2.default.createElement('input', {
+	                      type: 'text',
+	                      className: 'form-control',
+	                      placeholder: '\u51FA\u7248\u5E74',
 	                      value: model.unYear,
-	                      onChange: _this2.onChangeField("unYear").bind(_this2)
+	                      onChange: _this2.onChangeField('unYear').bind(_this2)
 	                    })
 	                  )
 	                );
 	              default:
-	              //nothing
+	              // nothing
 	            }
 	          }(),
 	          _react2.default.createElement(
-	            "button",
-	            { className: "btn btn-default", onClick: this.submitHandler },
-	            "\u63D0\u4EA4"
+	            'button',
+	            { className: 'btn btn-default', onClick: this.submitHandler },
+	            '\u63D0\u4EA4'
 	          ),
 	          _react2.default.createElement(
-	            "button",
+	            'button',
 	            {
-	              className: "btn btn-danger",
-	              style: { marginLeft: "20px" },
+	              className: 'btn btn-danger',
+	              style: { marginLeft: '20px' },
 	              onClick: this.resetHandler
 	            },
-	            "\u6E05\u7A7A\u6587\u732E\u6570\u636E"
+	            '\u6E05\u7A7A\u6587\u732E\u6570\u636E'
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "h3",
+	          'h3',
 	          null,
-	          "\u4EE5\u4E0B\u4E3A\u5DF2\u9009\u62E9\u7684\u6587\u732E"
+	          '\u4EE5\u4E0B\u4E3A\u5DF2\u9009\u62E9\u7684\u6587\u732E'
 	        ),
-	        bookModel.length === 0 ? "空" : _lodash2.default.map(bookModel, function (item) {
+	        bookModel.length === 0 ? '空' : _lodash2.default.map(bookModel, function (item) {
 	          var key = _lodash2.default.uniqueId();
 	          return _react2.default.createElement(
-	            "p",
+	            'p',
 	            { key: item.id },
 	            bookModel.indexOf(item) + 1,
-	            ".\xA0",
+	            '.\xA0',
 	            item.book
 	          );
 	        })

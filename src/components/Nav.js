@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Route, IndexRoute, Link } from "react-router";
+import React, { Component } from 'react';
+import { Route, IndexRoute, Link } from 'react-router';
 
 const Nav = () =>
-  <nav className="navbar navbar-default navbar-custom navbar-fixed-top">
+  (<nav className="navbar navbar-default navbar-custom navbar-fixed-top">
     <div className="container-fluid">
       <div className="navbar-header page-scroll">
         <button
@@ -41,6 +41,6 @@ const Nav = () =>
         </ul>
       </div>
     </div>
-  </nav>;
+  </nav>);
 
 export default Nav;

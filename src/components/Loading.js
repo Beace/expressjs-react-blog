@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 const Loading = () =>
-  <div className="loading">
+  (<div className="loading">
     <span />
     <span />
     <span />
     <span />
     <span />
-  </div>;
+  </div>);
 
 export default Loading;
