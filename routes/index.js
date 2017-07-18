@@ -1,10 +1,15 @@
-var mongoose = require("../mongo.js");
-var markdown = require("markdown").markdown;
-var articleSchema = require("../src/models/schema.js");
-var marked = require("marked");
-var highlightjs = require("highlight.js");
+import path from "path";
+import mongoose from "../mongo.js";
+import articleSchema from "../src/models/schema.js";
+import marked from "marked";
+import highlightjs from "highlight.js";
 
 module.exports = function(app) {
+  // app.get("*", function(req, res) {
+  //   res.sendFile("index.html", { root: path.join(__dirname, "../", "views") });
+  // });
+
+  // 以下使用模板引擎
   app.get("/", function(req, res) {
     res.render("index", {
       title: "Article"
