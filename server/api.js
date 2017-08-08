@@ -1,59 +1,24 @@
-import path from 'path';
-import mongoose from '../mongo.js';
-import articleSchema from '../src/models/schema.js';
 import marked from 'marked';
 import highlightjs from 'highlight.js';
+import mongoose from '../mongo';
+import articleSchema from '../src/models/schema';
 
-module.exports = function (app) {
-  // app.get("*", function(req, res) {
-  //   res.sendFile("index.html", { root: path.join(__dirname, "../", "views") });
-  // });
+/* eslint-disable no-console */
 
-  // 以下使用模板引擎
-  app.get('/', (req, res) => {
-    res.render('index', {
-      title: 'Article',
-    });
-  });
+module.exports = app => {
+  // allow custom header and CORS
+  app.all('*', (req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+    res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
 
-  app.get('/about', (req, res) => {
-    res.render('index', {
-      title: 'About',
-    });
-  });
-
-  app.get('/contact', (req, res) => {
-    res.render('index', {
-      title: 'Contact',
-    });
+    if (req.method === 'OPTIONS') {
+      res.send(200);
+    } else {
+      next();
+    }
   });
 
-  app.get('/work', (req, res) => {
-    res.render('index', {
-      title: 'work',
-    });
-  });
-  app.get('/article/:id', (req, res) => {
-    res.render('index', {
-      title: 'article',
-    });
-  });
-  app.get('/admin', (req, res) => {
-    res.render('index', {
-      title: 'admin',
-    });
-  });
-  app.get('/book', (req, res) => {
-    res.render('index', {
-      title: 'book',
-    });
-  });
-
-  app.get('/users', (req, res, next) => {
-    res.send('respond with a resource');
-  });
-
-  // API
   app.get('/api/articles', (req, res) => {
     const db = mongoose.createConnection('localhost', 'article');
     db.once('open', () => {
@@ -115,7 +80,10 @@ module.exports = function (app) {
       const article = new Article(model);
       article.save(model);
       if (err) {
-        return err;
+        res.send({
+          code: 0,
+          msg: err,
+        });
       }
       res.send({
         code: 0,

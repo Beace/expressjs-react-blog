@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 import { Link, browserHistory } from 'react-router';
-
-import Header from 'components/Header.js';
-import Loading from 'components/Loading.js';
+import Header from 'components/Header';
+import Loading from 'components/Loading';
+import Fetch from '../fetch';
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,8 +14,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/articles')
-      .then(res => res.json())
+    Fetch.get('api/articles')
       .then(models => {
         this.setState({
           models,
@@ -33,12 +32,13 @@ class Home extends React.Component {
 
   render() {
     const models = this.state.models ? this.state.models : [];
-    const _this = this;
+    const that = this;
 
     return (
       <div>
         <Header />
         <div className="container">
+          hello233
           <div className="row">
             <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               {models.length === 0
@@ -50,7 +50,7 @@ class Home extends React.Component {
                   return (
                     <div key={key}>
                       <div className="post-preview">
-                        <a onClick={_this.detailHandler.bind(this, item)}>
+                        <a onClick={that.detailHandler.bind(this, item)}>
                           <h2 className="post-title">
                             {item.title}
                           </h2>
@@ -59,10 +59,10 @@ class Home extends React.Component {
                           </h3>
                         </a>
                         <p className="post-meta">
-                            Posted by <a href="#">{item.author}</a> on{' '}
+                          Posted by <a>{item.author}</a> on
                           {item.date
-                              ? item.date.substring(0, 10)
-                              : Date.now()}
+                            ? item.date.substring(0, 10)
+                            : Date.now()}
                         </p>
                       </div>
                       <hr />

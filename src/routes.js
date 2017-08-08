@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { Route, IndexRoute, Link, browserHistory } from 'react-router';
-import Nav from './components/Nav.js';
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
-import Home from './components/Home.js';
-import Contacts from './components/Contacts.js';
-import Post from './components/Post.js';
-import Abouts from './components/About.js';
-import TextArea from './beComponents/TextArea.js';
-import BookForm from './beComponents/BookForm.js';
-import BookHeader from './components/BookHeader.js';
-import Loading from './components/Loading.js';
+import { Route, IndexRoute } from 'react-router';
+import Nav from './components/Nav';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Contacts from './components/Contacts';
+import Post from './components/Post';
+import Abouts from './components/About';
+import TextArea from './beComponents/TextArea';
+import BookForm from './beComponents/BookForm';
+import BookHeader from './components/BookHeader';
+
 class App extends Component {
   render() {
     return (

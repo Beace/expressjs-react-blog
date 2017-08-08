@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Loading from 'components/Loading.js';
+import Loading from 'components/Loading';
+import Fetch from '../fetch';
 
 export default class Post extends Component {
   constructor(props) {
@@ -15,16 +16,15 @@ export default class Post extends Component {
   }
   componentDidMount() {
     const id = this.props.params.id;
-    fetch(`/api/post/${id}`).then(res => res.json()).then(model => {
-      if (model) {
-        this.setState({
-          model,
-        });
-      } else {
-        throw error;
-      }
+    Fetch.get(`api/post/${id}`).then(model => {
+      this.setState({
+        model,
+      });
+    }).catch(error => {
+      throw error;
     });
   }
+
   render() {
     const model = this.state.model;
     return (
@@ -41,7 +41,7 @@ export default class Post extends Component {
                     {model.abstract}
                   </h2>
                   <span className="meta">
-                    Posted by <a href="#">{model.author}</a> on{' '}
+                    Posted by <a>{model.author}</a> on{' '}
                     {model.date ? model.date.substring(0, 10) : ''}
                   </span>
                 </div>
