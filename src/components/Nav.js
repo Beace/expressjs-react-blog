@@ -30,6 +30,9 @@ const Nav = () =>
             <Link to="/about">about</Link>
           </li>
           <li>
+            <Link to="/news">news</Link>
+          </li>
+          <li>
             <Link to="/contact">contact</Link>
           </li>
           <li>

@@ -28,6 +28,8 @@ module.exports = {
     alias: {
       components: path.resolve(__dirname, 'src/components/'),
       beComponents: path.resolve(__dirname, 'src/beComponents/'),
+      containers: path.resolve(__dirname, 'src/containers/'),
+      fetch: path.resolve(__dirname, 'src/fetch/'),
     },
   },
   module: {
