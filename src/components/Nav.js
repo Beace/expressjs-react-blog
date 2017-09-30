@@ -14,7 +14,7 @@ const Nav = () =>
           <span className="sr-only">Toggle navigation</span>
           Menu <i className="fa fa-bars" />
         </button>
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" activeClassName="active" to="/">
           HOME
         </Link>
       </div>
@@ -24,22 +24,19 @@ const Nav = () =>
       >
         <ul className="nav navbar-nav navbar-right">
           <li>
-            <Link to="/">home22</Link>
+            <Link activeClassName="active" to="/about">about</Link>
           </li>
           <li>
-            <Link to="/about">about22</Link>
+            <Link activeClassName="active" to="/news">news</Link>
           </li>
           <li>
-            <Link to="/news">news</Link>
+            <Link activeClassName="active" to="/contact">contact</Link>
           </li>
           <li>
-            <Link to="/contact">contact</Link>
+            <Link activeClassName="active" to="/book">book</Link>
           </li>
           <li>
-            <Link to="/book">book</Link>
-          </li>
-          <li>
-            <Link to="/work">work</Link>
+            <Link activeClassName="active" to="/work">work</Link>
           </li>
         </ul>
       </div>
