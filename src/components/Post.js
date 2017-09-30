@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Loading from 'components/Loading';
 import Fetch from '../fetch';
 
-export default class Post extends Component {
+class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,3 +69,9 @@ export default class Post extends Component {
     );
   }
 }
+
+Post.propTypes = {
+  params: PropTypes.object,
+};
+
+export default Post;

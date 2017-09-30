@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Route, IndexRoute, Link } from 'react-router';
+import React from 'react';
+import { Link } from 'react-router';
 
 const Nav = () =>
   (<nav className="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -24,10 +24,10 @@ const Nav = () =>
       >
         <ul className="nav navbar-nav navbar-right">
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/">home22</Link>
           </li>
           <li>
-            <Link to="/about">about</Link>
+            <Link to="/about">about22</Link>
           </li>
           <li>
             <Link to="/news">news</Link>

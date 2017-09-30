@@ -1,5 +1,5 @@
 const HOST = 'http://localhost';
-const NEWS_HOST = 'http://toutiao-ali.juheapi.com/toutiao/index';
+// const NEWS_HOST = 'http://toutiao-ali.juheapi.com/toutiao/index';
 const PORT = '4000';
 
 const URL = `${HOST}:${PORT}`;

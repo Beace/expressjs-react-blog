@@ -16,12 +16,8 @@ const Routes = (
 );
 
 const app = document.getElementById('app');
-const renderApp = render(Routes, app);
+render(Routes, app);
 
 // Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./routes', () => {
-    const nextRoutes = routes;
-    renderApp({ routes: nextRoutes() });
-  });
-}
+
+if (module.hot) module.hot.accept(Routes, () => render(Routes));
