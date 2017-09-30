@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import Modal from 'components/Modal.js';
 export default class TextArea extends Component {
@@ -17,12 +18,10 @@ export default class TextArea extends Component {
         content: [],
       },
     };
-    this.submitHandler = this.submitHandler.bind(this);
   }
 
   componentDidMount() {
-    let testEditor;
-    testEditor = editormd('myEditor', {
+    editormd('myEditor', {
       width: '100%',
       height: 640,
       emoji: true,
@@ -44,12 +43,12 @@ export default class TextArea extends Component {
 
   submitHandler(e) {
     e.preventDefault();
-    let _this = this,
-      model = this.state.model;
+    const that = this;
+    const model = this.state.model;
     model.content = $('.editormd-markdown-textarea').val();
 
     for (const i in model) {
-      if (model[i] == '' || model[i].toString().length === 0) {
+      if (model[i] === '' || model[i].toString().length === 0) {
         switch (i) {
           case 'author':
             alert('作者未填写');
@@ -81,7 +80,7 @@ export default class TextArea extends Component {
         if (res.ok) {
           $('#myModal').modal('show');
           $('.editormd-markdown-textarea').text('');
-          _this.setState({
+          that.setState({
             model: {
               author: 'beace',
               abstract: '',
@@ -93,9 +92,7 @@ export default class TextArea extends Component {
           alert('Oops! You are not authorized.');
         }
       },
-      e => {
-        alert('Error submitting form!');
-      }
+      () => alert('Error submitting form!')
     );
   }
 
@@ -112,7 +109,7 @@ export default class TextArea extends Component {
               id="author"
               placeholder="作者"
               value={model.author}
-              onChange={this.onChangeField('author').bind(this)}
+              onChange={() => this.onChangeField('author')}
             />
           </div>
           <div className="form-group">
@@ -123,7 +120,7 @@ export default class TextArea extends Component {
               id="title"
               placeholder="标题"
               value={model.title}
-              onChange={this.onChangeField('title').bind(this)}
+              onChange={() => this.onChangeField('title')}
             />
           </div>
           <div className="form-group">
@@ -134,7 +131,7 @@ export default class TextArea extends Component {
               id="abstract"
               placeholder="摘要"
               value={model.abstract}
-              onChange={this.onChangeField('abstract').bind(this)}
+              onChange={() => this.onChangeField('abstract')}
             />
           </div>
           <div className="form-group">

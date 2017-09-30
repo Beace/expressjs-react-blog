@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const Contacts = () =>
-  (<div>
+const Contacts = () => (
+  <div>
     <header
       className="intro-header"
       style={{ backgroundImage: "url('images/contact-bg.jpg')" }}
@@ -31,9 +31,10 @@ const Contacts = () =>
           <form name="sentMessage" id="contactForm" noValidate>
             <div className="row control-group">
               <div className="form-group col-xs-12 floating-label-form-group controls">
-                <label>Name</label>
+                <label htmlFor="name">Name</label>
                 <input
                   type="text"
+                  name="name"
                   className="form-control"
                   placeholder="Name"
                   id="name"
@@ -45,9 +46,10 @@ const Contacts = () =>
             </div>
             <div className="row control-group">
               <div className="form-group col-xs-12 floating-label-form-group controls">
-                <label>Email Address</label>
+                <label htmlFor="email">Email Address</label>
                 <input
                   type="email"
+                  name="name"
                   className="form-control"
                   placeholder="Email Address"
                   id="email"
@@ -59,9 +61,10 @@ const Contacts = () =>
             </div>
             <div className="row control-group">
               <div className="form-group col-xs-12 floating-label-form-group controls">
-                <label>Phone Number</label>
+                <label htmlFor="tel">Phone Number</label>
                 <input
                   type="tel"
+                  name="tel"
                   className="form-control"
                   placeholder="Phone Number"
                   id="phone"
@@ -73,9 +76,10 @@ const Contacts = () =>
             </div>
             <div className="row control-group">
               <div className="form-group col-xs-12 floating-label-form-group controls">
-                <label>Message</label>
+                <label htmlFor="message">Message</label>
                 <textarea
                   rows="5"
+                  name="message"
                   className="form-control"
                   placeholder="Message"
                   id="message"
@@ -98,6 +102,7 @@ const Contacts = () =>
         </div>
       </div>
     </div>
-  </div>);
+  </div>
+);
 
 export default Contacts;

@@ -7,7 +7,7 @@
 /* eslint-disable */
 // USE ES6
 require('babel-register')({
-  presets: ['es2015'],
+  presets: ['env'],
 });
 
 const app = require('../server/app');
