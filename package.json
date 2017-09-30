@@ -7,7 +7,9 @@
     "browser": "webpack-dev-server --open",
     "api": "cross-env NODE_ENV=development nodemon ./bin/www",
     "webpack": "webpack --colors --watch",
-    "eslint": "eslint *.js server/**/ src/**/ --ext .js,.jsx"
+    "eslint": "eslint *.js server/**/ src/**/ --ext .js,.jsx",
+    "generate": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
