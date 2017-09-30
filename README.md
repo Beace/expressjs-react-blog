@@ -4,7 +4,7 @@ node(expressjs) and react blog
 
 ## Look Like
 
-![](http://images-manager.oss-cn-shanghai.aliyuncs.com/static/node-react/node-react3/node-react3-3.jpg)
+![](./screenshot/home.png)
 
 ## Visit
 
