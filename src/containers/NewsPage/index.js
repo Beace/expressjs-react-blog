@@ -6,6 +6,7 @@ import Loading from 'components/Loading';
 class NewsPage extends React.Component {
   state = {
     data: [],
+    error: null,
   };
 
   componentDidMount() {
@@ -16,13 +17,14 @@ class NewsPage extends React.Component {
         });
       })
       .catch(error => {
-        console.log(error);
+        this.setState({
+          error,
+        });
       });
   }
 
   render() {
     const { data } = this.state;
-    console.log(data);
     return (
       <div>
         <Header />

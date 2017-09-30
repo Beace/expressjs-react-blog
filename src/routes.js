@@ -1,42 +1,48 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
-
 import App from 'containers/App';
-import Header from 'components/Header';
-import Contacts from 'components/Contacts';
-import Post from 'components/Post';
-import Abouts from 'components/About';
-import TextArea from 'beComponents/TextArea';
 import HomePage from 'containers/HomePage';
-import BookPage from 'containers/BookPage';
-import NewsPage from 'containers/NewsPage';
 
-const NoMatch = () => (
-  <div>
-    <Header />
-    <div className="container text-center">404 NOMATCH</div>
-  </div>
-);
+const routes = {
+  component: App,
+  path: '/',
+  indexRoute: { component: HomePage },
+  childRoutes: [
+    {
+      path: 'article/:id',
+      getComponent(location, cb) {
+        import('components/Post').then(module => cb(null, module.default));
+      },
+    },
+    {
+      path: 'news',
+      getComponent(location, cb) {
+        import('containers/NewsPage').then(module => cb(null, module.default));
+      },
+    },
+    {
+      path: 'about',
+      getComponent(location, cb) {
+        import('components/About').then(module => cb(null, module.default));
+      },
+    },
+    {
+      path: 'contact',
+      getComponent(location, cb) {
+        import('components/Contacts').then(module => cb(null, module.default));
+      },
+    },
+    {
+      path: 'book',
+      getComponent(location, cb) {
+        import('containers/BookPage').then(module => cb(null, module.default));
+      },
+    },
+    {
+      path: '*',
+      getComponent(location, cb) {
+        import('containers/NotMatch').then(module => cb(null, module.default));
+      },
+    },
+  ],
+};
 
-
-const Admin = () => (
-  <div>
-    <Header />
-    <TextArea />
-  </div>
-);
-
-export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={HomePage} />
-    <Route path="article">
-      <Route path=":id" component={Post} />
-    </Route>
-    <Route path="news" component={NewsPage}></Route>
-    <Route path="about" component={Abouts} />
-    <Route path="contact" component={Contacts} />
-    <Route path="admin" component={Admin} />
-    <Route path="book" component={BookPage} />
-    <Route path="*" component={NoMatch} />
-  </Route>
-);
+export default routes;
