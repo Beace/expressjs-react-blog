@@ -1,13 +1,14 @@
 {
   "name": "express-react",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server",
     "browser": "webpack-dev-server --open",
     "api": "cross-env NODE_ENV=development nodemon ./bin/www",
     "webpack": "webpack --colors --watch",
-    "eslint": "eslint *.js server/**/ src/**/ --ext .js,.jsx"
+    "eslint": "eslint *.js server/**/ src/**/ --ext .js,.jsx",
+    "release": "standard-version"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -143,6 +144,7 @@
     "eslint-plugin-redux-saga": "^0.4.0",
     "html-webpack-plugin": "^2.30.1",
     "nodemon": "^1.12.0",
+    "standard-version": "^4.2.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.6.1"
   }

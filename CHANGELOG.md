@@ -1,5 +1,21 @@
 # Change Log
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.1.0"></a>
+# 0.1.0 (2017-09-30)
+
+
+### Features
+
+* **changelog:** add a changelog file ([8a8b0ca](https://github.com/BeAce/expressjs-react-blog/commit/8a8b0ca))
+* **src/containers:** 添加新闻页面 ([4dddcf9](https://github.com/BeAce/expressjs-react-blog/commit/4dddcf9))
+* **src/fetch:** 抽象API请求 ([9fe0fb4](https://github.com/BeAce/expressjs-react-blog/commit/9fe0fb4))
+
+
+
+# Change Log
+
 ## [0.10.0](https://github.com/BeAce/expressjs-react-blog/tree/0.10.0) (2017-09-30)
 [Full Changelog](https://github.com/BeAce/expressjs-react-blog/compare/0.1...0.10.0)
 
