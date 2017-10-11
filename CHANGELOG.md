@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.4.0...v0.5.0) (2017-10-11)
+
+
+### Bug Fixes
+
+* **.gitignore:** git忽略build文件夹 ([f748a93](https://github.com/BeAce/expressjs-react-blog/commit/f748a93))
+
+
+### Features
+
+* **webpack.prod.config.js:** 添加生产环境下的webpack build配置，初步处理了js和模板html的打包问题 ([519d4b4](https://github.com/BeAce/expressjs-react-blog/commit/519d4b4))
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.3.0...v0.4.0) (2017-10-11)
 
