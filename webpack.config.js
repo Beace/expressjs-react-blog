@@ -3,6 +3,10 @@ const webpack = require('webpack');
 const express = require('express');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dashboard = require('webpack-dashboard');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const dashboard = new Dashboard();
+
 const VENOR = [
   'lodash',
   'react',
@@ -55,6 +59,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new DashboardPlugin(dashboard.setData),
     new webpack.optimize.CommonsChunkPlugin({
       names: 'vendor',
       minChunks: Infinity,
@@ -70,23 +75,17 @@ module.exports = {
       template: 'index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    // enable HMR globally
-
     new webpack.NamedModulesPlugin(),
-    // prints more readable module names in the browser console on HMR updates
-
     new webpack.NoEmitOnErrorsPlugin(),
-    // do not emit compiled assets that include errors
   ],
   devServer: {
     host: 'localhost',
     port: 3000,
     stats: { chunks: false },
     historyApiFallback: true,
-    // respond to 404s with index.html
     publicPath: '/',
-    hot: true,
-    // enable HMR on the server
+    hotOnly: true,
+    quiet: true, // 处于静默模式，webpack-dashboard生效
     before(app) {
       app.use('/', express.static(path.join(__dirname, 'public')));
     },
