@@ -3,21 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const OfflinePlugin = require('offline-plugin');
 
-const VENOR = [
-  'lodash',
-  'react',
-  'react-dom',
-  'react-router',
-];
+const VENOR = ['lodash', 'react', 'react-dom', 'react-router'];
 
 module.exports = {
   entry: {
-    bundle: [
-      './src/index.js',
-    ],
-    vendor: [
-      ...VENOR,
-    ],
+    bundle: ['./src/index.js'],
+    vendor: [...VENOR],
   },
   output: {
     path: path.resolve(process.cwd(), 'build'),
@@ -47,6 +38,36 @@ module.exports = {
         exclude: /(node_modules|bower_components|public\/)/,
         loaders: 'babel-loader',
         include: path.join(__dirname, 'src'),
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.(jpg|png|gif)$/,
+        loaders: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+              optipng: {
+                optimizationLevel: 7,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+            },
+          },
+        ],
       },
     ],
   },
@@ -103,6 +124,7 @@ module.exports = {
   ],
   target: 'web', // Make web variables accessible to webpack, e.g. window
   performance: {
-    assetFilter: assetFilename => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)),
+    assetFilter: assetFilename =>
+      !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
 };

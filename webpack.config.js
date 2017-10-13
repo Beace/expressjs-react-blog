@@ -3,16 +3,11 @@ const webpack = require('webpack');
 const express = require('express');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Dashboard = require('webpack-dashboard');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const dashboard = new Dashboard();
+// const Dashboard = require('webpack-dashboard');
+// const DashboardPlugin = require('webpack-dashboard/plugin');
+// const dashboard = new Dashboard();
 
-const VENOR = [
-  'lodash',
-  'react',
-  'react-dom',
-  'react-router',
-];
+const VENOR = ['lodash', 'react', 'react-dom', 'react-router'];
 
 module.exports = {
   entry: {
@@ -56,10 +51,40 @@ module.exports = {
         loaders: 'babel-loader',
         include: path.join(__dirname, 'src'),
       },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.(jpg|png|gif)$/,
+        loaders: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+              optipng: {
+                optimizationLevel: 7,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
-    new DashboardPlugin(dashboard.setData),
+    // new DashboardPlugin(dashboard.setData),
     new webpack.optimize.CommonsChunkPlugin({
       names: 'vendor',
       minChunks: Infinity,
@@ -85,7 +110,7 @@ module.exports = {
     historyApiFallback: true,
     publicPath: '/',
     hotOnly: true,
-    quiet: true, // 处于静默模式，webpack-dashboard生效
+    // quiet: true, // 处于静默模式，webpack-dashboard生效
     before(app) {
       app.use('/', express.static(path.join(__dirname, 'public')));
     },
