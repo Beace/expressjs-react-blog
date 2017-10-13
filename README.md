@@ -19,14 +19,32 @@ Collection: articles
 
 ### CLI
 
+#### develop
+
 ```bash
-git clone https://github.com/BeAce/expressjs-react-blog.git
-cd expressjs-react-blog
-npm install
-npm start && npm run be-start
+$ git clone https://github.com/BeAce/expressjs-react-blog.git
+$ cd expressjs-react-blog
+$ yarn
+$ npm run api
+// another terminal
+$ npm start
 ```
 
-run js/babel
+#### just run js/babel
+
 ```bash
-npm run webpack
+$ npm run webpack
 ```
+
+#### just run eslint
+
+```bash
+$ npm run eslint
+```
+
+#### need build
+
+```
+$ npm run build
+```
+start a server for index.html in build folder.

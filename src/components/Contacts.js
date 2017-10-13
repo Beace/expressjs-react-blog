@@ -8,7 +8,7 @@ const Contacts = () => (
     >
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div className="col align-self-center">
             <div className="page-heading">
               <h1>Contact Me</h1>
               <hr className="small" />
@@ -23,7 +23,7 @@ const Contacts = () => (
 
     <div className="container">
       <div className="row">
-        <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div className="col align-self-center">
           <p>
             Want to get in touch with me? Fill out the form below to send me a
             message and I will try to get back to you within 24 hours!
