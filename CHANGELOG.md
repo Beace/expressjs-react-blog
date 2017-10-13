@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.5.0...v0.6.0) (2017-10-13)
+
+
+### Features
+
+* **build/**:** 重新build所有文件 ([74cfe71](https://github.com/BeAce/expressjs-react-blog/commit/74cfe71))
+* **containers/*:** 修改原来引入的所有关于样式和第三方js，分别在不同组件内部加载 ([6aab83a](https://github.com/BeAce/expressjs-react-blog/commit/6aab83a))
+* **index.html:** 移除index.html中有关第三方包 ([f515750](https://github.com/BeAce/expressjs-react-blog/commit/f515750))
+* **public:** 删除重复的第三方文件 ([8e0bddd](https://github.com/BeAce/expressjs-react-blog/commit/8e0bddd))
+* **public/*:** 删除重复样式 ([2e6beb8](https://github.com/BeAce/expressjs-react-blog/commit/2e6beb8))
+* **webpack.prod.config.js:** 添加生产环境下的webpack build配置，初步处理了js和模板html的打包问题 ([2e672dd](https://github.com/BeAce/expressjs-react-blog/commit/2e672dd))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.4.0...v0.5.0) (2017-10-11)
 
