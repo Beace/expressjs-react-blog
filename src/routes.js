@@ -9,7 +9,7 @@ const routes = {
     {
       path: 'article/:id',
       getComponent(location, cb) {
-        import('components/Post').then(module => cb(null, module.default));
+        import('containers/Post').then(module => cb(null, module.default));
       },
     },
     {
