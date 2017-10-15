@@ -2,20 +2,21 @@ const HOST = 'http://localhost';
 // const NEWS_HOST = 'http://toutiao-ali.juheapi.com/toutiao/index';
 const PORT = '4000';
 
-const URL = `${HOST}:${PORT}`;
+const URL = `${HOST}:${PORT}/`;
 
 /* eslint-disable no-console */
 
 class API {
   constructor() {
     this.newsHost = 'http://toutiao-ali.juheapi.com/toutiao/index';
-    this.host = 'http://localhost';
+    this.host = process.env.NODE_ENV === 'development' ? URL : 'https://beace.tech/';
     this.port = '4000';
   }
   get(url, params) {
     const param = Object.assign({}, params);
     console.log(param);
-    return fetch(`${URL}/${url}`).then(res => res.json());
+    console.log(process.env);
+    return fetch(`${this.host}${url}`).then(res => res.json());
   }
 
   getNews(type) {

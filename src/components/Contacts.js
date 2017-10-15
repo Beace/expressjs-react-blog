@@ -2,10 +2,7 @@ import React from 'react';
 
 const Contacts = () => (
   <div>
-    <header
-      className="intro-header"
-      style={{ backgroundImage: "url('images/contact-bg.jpg')" }}
-    >
+    <header className="intro-header contact-bg">
       <div className="container">
         <div className="row">
           <div className="col align-self-center">

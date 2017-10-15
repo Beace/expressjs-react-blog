@@ -1,5 +1,5 @@
 .post-header-bg {
-  background-image: url(/images/post-bg.jpg);
+  background-image: url(../../../public/images/post-bg.jpg);
 }
 .textarea-min-height {
   min-height: 300px;

@@ -2,10 +2,7 @@ import React from 'react';
 
 const About = () => (
   <div>
-    <header
-      className="intro-header"
-      style={{ backgroundImage: "url('images/about-bg.jpg')" }}
-    >
+    <header className="intro-header about-bg">
       <div className="container">
         <div className="row">
           <div className="col align-self-center">

@@ -61,7 +61,7 @@ pre {
   color: #333;
   word-break: break-all;
   word-wrap: break-word;
-  background: url(/images/blueprint-dark.fd85a7a074ae.png) top center #fafbfc;
+  background: url(../../../public/images/blueprint-dark.fd85a7a074ae.png) top center #fafbfc;
   border-left: 3px solid #abcdef;
   border-radius: 4px;
   font-family: "Operator Mono SSm A","Operator Mono SSm B",monospace;
