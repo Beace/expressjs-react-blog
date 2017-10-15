@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.6.0...v0.7.0) (2017-10-15)
+
+
+### Bug Fixes
+
+* **build:** 处理冲突，重新build ([270da63](https://github.com/BeAce/expressjs-react-blog/commit/270da63))
+
+
+### Features
+
+* **build/**:** 重新build项目，并且build中添加static/images路径 ([ef4b7d3](https://github.com/BeAce/expressjs-react-blog/commit/ef4b7d3))
+* **src/*:** 改变背景图片的路径 ([23e0825](https://github.com/BeAce/expressjs-react-blog/commit/23e0825))
+* **webpack:** 重新定义file-loader,暂时不进行图片优化，移除了express中的静态文件路由，js文件通过cdn，图片文件通过打包到项目中来处理文件404的问题，增加dev环境的检测，使用不同的api ([3a1966f](https://github.com/BeAce/expressjs-react-blog/commit/3a1966f))
+
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.5.0...v0.6.0) (2017-10-13)
 
