@@ -1,11 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
-const express = require('express');
+// const express = require('express');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const Dashboard = require('webpack-dashboard');
-// const DashboardPlugin = require('webpack-dashboard/plugin');
-// const dashboard = new Dashboard();
+const Dashboard = require('webpack-dashboard');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const dashboard = new Dashboard();
 
 const VENOR = ['lodash', 'react', 'react-dom', 'react-router'];
 
@@ -61,35 +61,19 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|gif)$/,
-        loaders: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            query: {
-              progressive: true,
-              pngquant: {
-                quality: '65-90',
-                speed: 4,
-              },
-              optipng: {
-                optimizationLevel: 7,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-            },
-          },
-        ],
+        loader: 'file-loader',
+        query: {
+          name: 'static/images/[name].[ext]',
+        },
       },
     ],
   },
   plugins: [
-    // new DashboardPlugin(dashboard.setData),
+    new DashboardPlugin(dashboard.setData),
     new webpack.optimize.CommonsChunkPlugin({
       names: 'vendor',
       minChunks: Infinity,
     }),
-    // 只删除 dist 文件夹下的 bundle 和 manifest 文件
     new CleanWebpackPlugin(['build/bundle.*.js'], {
       // 打印 log
       verbose: true,
@@ -102,6 +86,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
   ],
   devServer: {
     host: 'localhost',
@@ -111,8 +100,8 @@ module.exports = {
     publicPath: '/',
     hotOnly: true,
     // quiet: true, // 处于静默模式，webpack-dashboard生效
-    before(app) {
-      app.use('/', express.static(path.join(__dirname, 'public')));
-    },
+    // before(app) {
+    //   app.use('/', express.static(path.join(__dirname, 'public')));
+    // },
   },
 };

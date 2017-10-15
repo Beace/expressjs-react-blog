@@ -49,25 +49,10 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|gif)$/,
-        loaders: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            query: {
-              progressive: true,
-              pngquant: {
-                quality: '65-90',
-                speed: 4,
-              },
-              optipng: {
-                optimizationLevel: 7,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-            },
-          },
-        ],
+        loader: 'file-loader',
+        query: {
+          name: 'static/images/[name].[ext]',
+        },
       },
     ],
   },
@@ -97,6 +82,11 @@ module.exports = {
       inject: true,
     }),
     new webpack.NamedModulesPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
     // Put it in the end to capture all the HtmlWebpackPlugin's
     // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
     // new OfflinePlugin({
