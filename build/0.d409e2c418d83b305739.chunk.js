@@ -18301,10 +18301,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var BookHeader = function BookHeader() {
   return _react2.default.createElement(
     "header",
-    {
-      className: "intro-header book-header",
-      style: { backgroundImage: "url('images/home-bg.jpg')" }
-    },
+    { className: "intro-header book-header book-header-bg" },
     _react2.default.createElement(
       "div",
       { className: "container" },
@@ -18313,7 +18310,7 @@ var BookHeader = function BookHeader() {
         { className: "row" },
         _react2.default.createElement(
           "div",
-          { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+          { className: "col align-self-center" },
           _react2.default.createElement(
             "div",
             { className: "site-heading" },

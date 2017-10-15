@@ -22,10 +22,7 @@ var About = function About() {
     null,
     _react2.default.createElement(
       "header",
-      {
-        className: "intro-header",
-        style: { backgroundImage: "url('images/about-bg.jpg')" }
-      },
+      { className: "intro-header about-bg" },
       _react2.default.createElement(
         "div",
         { className: "container" },
@@ -34,7 +31,7 @@ var About = function About() {
           { className: "row" },
           _react2.default.createElement(
             "div",
-            { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+            { className: "col align-self-center" },
             _react2.default.createElement(
               "div",
               { className: "page-heading" },

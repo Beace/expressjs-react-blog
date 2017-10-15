@@ -22,10 +22,7 @@ var Contacts = function Contacts() {
     null,
     _react2.default.createElement(
       "header",
-      {
-        className: "intro-header",
-        style: { backgroundImage: "url('images/contact-bg.jpg')" }
-      },
+      { className: "intro-header contact-bg" },
       _react2.default.createElement(
         "div",
         { className: "container" },
@@ -34,7 +31,7 @@ var Contacts = function Contacts() {
           { className: "row" },
           _react2.default.createElement(
             "div",
-            { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+            { className: "col align-self-center" },
             _react2.default.createElement(
               "div",
               { className: "page-heading" },
@@ -62,7 +59,7 @@ var Contacts = function Contacts() {
         { className: "row" },
         _react2.default.createElement(
           "div",
-          { className: "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" },
+          { className: "col align-self-center" },
           _react2.default.createElement(
             "p",
             null,
