@@ -27330,7 +27330,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Routes = _react2.default.createElement(
   _reactRouter.Router,
-  { history: _reactRouter.hashHistory },
+  { history: _reactRouter.browserHistory },
   _routes2.default
 );
 
