@@ -27333,7 +27333,6 @@ var Routes = _react2.default.createElement(
   { history: _reactRouter.browserHistory },
   _routes2.default
 );
-// import { Router, browserHistory } from 'react-router';
 
 // Routes
 
