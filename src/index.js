@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import 'react-hot-loader/patch';
 import { Router, browserHistory } from 'react-router';
-// import { Router, browserHistory } from 'react-router';
 
 // Routes
 import routes from './routes';
