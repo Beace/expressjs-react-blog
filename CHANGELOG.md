@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0"></a>
+# [0.8.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.7.0...v0.8.0) (2017-10-18)
+
+
+### Bug Fixes
+
+* **docs:** 修改文件夹名称为docs ([ee941a1](https://github.com/BeAce/expressjs-react-blog/commit/ee941a1))
+
+
+### Features
+
+* **.nojekyll:** 添加nojekyllfile ([436ea19](https://github.com/BeAce/expressjs-react-blog/commit/436ea19))
+* **build|doc:** 添加doc文件夹，重新build，使用githubpage ([bbd546a](https://github.com/BeAce/expressjs-react-blog/commit/bbd546a))
+* **public/images:** 优化图片大小 ([e114825](https://github.com/BeAce/expressjs-react-blog/commit/e114825))
+* **webpack:** 去除webpack中vendor的lodash，减小vendor体积 ([396e5eb](https://github.com/BeAce/expressjs-react-blog/commit/396e5eb))
+
+
+
 <a name="0.7.0"></a>
 # [0.7.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.6.0...v0.7.0) (2017-10-15)
 
