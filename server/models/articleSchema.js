@@ -29,4 +29,4 @@ ArticlesSchema.statics.findArticlesByAuthor = function(author) {
 
 const ArticlesModal = mongoose.model('ArticlesModal', ArticlesSchema);
 
-module.exports = ArticlesModal;
+export default ArticlesModal;

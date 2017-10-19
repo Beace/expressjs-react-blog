@@ -1,11 +1,18 @@
 import marked from 'marked';
 import highlightjs from 'highlight.js';
-import mongoose from '../mongo';
-import articleSchema from '../src/models/schema';
+import ArticlesModal from './models/articleSchema';
+const { wrap: async } = require('co');
 
 /* eslint-disable no-console */
 
-module.exports = app => {
+function errorHandler(err, res) {
+  res.json({
+    msg: err,
+    code: -1,
+  });
+}
+
+const routes = app => {
   // allow custom header and CORS
   app.all('*', (req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -19,76 +26,74 @@ module.exports = app => {
     }
   });
 
+  /**
+   * Find all articles
+   * @param  {[type]} '/api/articles' [description]
+   * @param  {[type]} (req,           res)          [description]
+   * @return {[json]}                 [json data]
+   */
   app.get('/api/articles', (req, res) => {
-    const db = mongoose.createConnection('localhost', 'article');
-    db.once('open', () => {
-      const Article = mongoose.model('articles', articleSchema);
-      Article.find(
-        {
-          author: 'Beace',
-        },
-        (err, docs) => {
-          if (err) console.log(err);
-          else {
-            res.send(docs);
-          }
-        }
-      );
-    });
-  });
-
-  app.get('/api/post/:id', (req, res) => {
-    const postId = req.params.id;
-    const db = mongoose.createConnection('localhost', 'article');
-    db.once('open', () => {
-      const Article = mongoose.model('articles', articleSchema);
-      Article.findOne(
-        {
-          _id: postId,
-        },
-        (err, doc) => {
-          if (err) console.log(err);
-          else {
-            if (doc) {
-              marked.setOptions({
-                renderer: new marked.Renderer(),
-                gfm: true,
-                tables: true,
-                breaks: false,
-                pedantic: false,
-                sanitize: false,
-                smartLists: true,
-                smartypants: false,
-                highlight(code) {
-                  return highlightjs.highlightAuto(code).value;
-                },
-              });
-              doc.content = marked(doc.content);
-            }
-            res.send(doc);
-          }
-        }
-      );
-    });
-  });
-
-  app.post('/api/post', (req, res) => {
-    const model = req.body;
-    const db = mongoose.createConnection('localhost', 'article');
-    db.once('open', err => {
-      const Article = mongoose.model('articles', articleSchema);
-      const article = new Article(model);
-      article.save(model);
-      if (err) {
-        res.send({
+    ArticlesModal.findArticles()
+      .then(data => {
+        res.json({
+          data: data || [],
           code: 0,
-          msg: err,
         });
-      }
-      res.send({
-        code: 0,
-        msg: 'success',
+      })
+      .catch(err => errorHandler(err, res));
+  });
+
+  /**
+   * Find article by objectid left the async function type for more infomation
+   * @param  {[type]} '/api/article/:id' [description]
+   * @param  {[type]} (req,               res           [description]
+   * @return {[json]}                     [json data]
+   */
+  app.get('/api/article/:id', async(function* (req, res) {
+    const id = req.params.id;
+    try {
+      const article = yield ArticlesModal.findArticleById(id);
+      const articleHTML = article;
+      marked.setOptions({
+        renderer: new marked.Renderer(),
+        gfm: true,
+        tables: true,
+        breaks: false,
+        pedantic: false,
+        sanitize: false,
+        smartLists: true,
+        smartypants: false,
+        highlight(code) {
+          return highlightjs.highlightAuto(code).value;
+        },
       });
-    });
+      articleHTML.content = marked(article.content);
+      res.json({
+        data: articleHTML,
+        code: 0,
+      });
+    } catch (error) {
+      errorHandler(error, res);
+    }
+  }));
+
+  /**
+   * Article for search by author e.g Beace
+   * @param  {[type]} '/api/articles/search?author=Beace' [description]
+   * @param  {[type]} (req,                  res           [description]
+   * @return {[json]}                        [json data]
+   */
+  app.get('/api/articles/search', (req, res) => {
+    const author = req.query.author;
+    ArticlesModal.findArticlesByAuthor(author)
+      .then(data => {
+        res.json({
+          data: data || [],
+          code: 0,
+        });
+      })
+      .catch(error => errorHandler(error, res));
   });
 };
+
+export default routes;
