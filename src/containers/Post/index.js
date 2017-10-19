@@ -18,7 +18,7 @@ class Post extends Component {
   }
   componentDidMount() {
     const id = this.props.params.id;
-    Fetch.get(`api/post/${id}`)
+    Fetch.get(`api/article/${id}`)
       .then(model => {
         this.setState({
           model,

@@ -16,7 +16,7 @@ class API {
     const param = Object.assign({}, params);
     console.log(param);
     console.log(process.env);
-    return fetch(`${this.host}${url}`).then(res => res.json());
+    return fetch(`${this.host}${url}`).then(res => res.json()).then(res => res.data);
   }
 
   getNews(type) {
