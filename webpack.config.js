@@ -7,7 +7,7 @@ const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const dashboard = new Dashboard();
 
-const VENOR = ['react', 'react-dom', 'react-router'];
+const VENDOR = ['react', 'react-dom', 'react-router'];
 
 module.exports = {
   entry: {
@@ -19,7 +19,7 @@ module.exports = {
     vendor: [
       'webpack-dev-server/client?http://localhost:3000',
       'react-hot-loader/patch',
-      ...VENOR,
+      ...VENDOR,
     ],
   },
   output: {

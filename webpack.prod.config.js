@@ -3,12 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const OfflinePlugin = require('offline-plugin');
 
-const VENOR = ['react', 'react-dom', 'react-router'];
+const VENDOR = ['react', 'react-dom', 'react-router'];
 
 module.exports = {
   entry: {
     bundle: ['./src/index.js'],
-    vendor: [...VENOR],
+    vendor: [...VENDOR],
   },
   output: {
     path: path.resolve(process.cwd(), 'build'),
