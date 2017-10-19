@@ -9,10 +9,12 @@
 require('babel-register')({
   presets: ['env'],
 });
+require("babel-polyfill");
 
 const app = require('../server/app');
 const debug = require('debug')('express-react:server');
 const http = require('http');
+const colors = require('colors');
 
 /**
  * Get port from environment and store in Express.
@@ -31,7 +33,7 @@ const server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port, () => console.log('🍺 🍺  the back-end server is running on port: ' + port));
+server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -86,7 +88,8 @@ function onError(error) {
  */
 
 function onListening() {
-  const addr = server.address();
-  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+  const address = server.address();
+  const bind = typeof address === 'string' ? `pipe ${address}` : `port ${address.port}`;
   debug(`Listening on ${bind}`);
+  console.log(colors.green(`\n[node-express:server] Listening on ${bind.yellow}\n`));
 }
