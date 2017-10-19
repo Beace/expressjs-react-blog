@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.8.0...v0.9.0) (2017-10-19)
+
+
+### Features
+
+* **bin/www:** 添加提示信息 ([0c8d892](https://github.com/BeAce/expressjs-react-blog/commit/0c8d892))
+* **build/**:** 重新build ([91c15d8](https://github.com/BeAce/expressjs-react-blog/commit/91c15d8))
+* **containers/Post:** 根据后端的请求改变相应的路由 ([31f95fe](https://github.com/BeAce/expressjs-react-blog/commit/31f95fe))
+* **server/**:** 重构server部分，去除每次请求链接一次数据库，并且结构化modal和db ([8bc9389](https://github.com/BeAce/expressjs-react-blog/commit/8bc9389))
+* **webpack:** 修改webpack 中vendor name ([25c5ee3](https://github.com/BeAce/expressjs-react-blog/commit/25c5ee3))
+* **yarn:** 添加一些辅助ci的工具，例如colors ([e2de0ac](https://github.com/BeAce/expressjs-react-blog/commit/e2de0ac))
+
+
+
 <a name="0.8.0"></a>
 # [0.8.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.7.0...v0.8.0) (2017-10-18)
 
