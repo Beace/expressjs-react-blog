@@ -8,7 +8,7 @@ node(expressjs) and react blog
 
 ## Visit
 
-[index page](https://beace.tech/)
+[index page](http://react.beacelee.com/)
 
 ## how to run it ?
 
