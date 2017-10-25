@@ -34,12 +34,7 @@ module.exports = options => ({
     ],
   },
   resolve: {
-    alias: {
-      components: path.resolve(__dirname, 'src/components/'),
-      beComponents: path.resolve(__dirname, 'src/beComponents/'),
-      containers: path.resolve(__dirname, 'src/containers/'),
-      fetch: path.resolve(__dirname, 'src/fetch/'),
-    },
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.jsx'],
   },
   plugins: options.plugins.concat([
