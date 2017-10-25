@@ -3,7 +3,7 @@
   "version": "0.9.0",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --progress",
     "browser": "cross-env NODE_ENV=development webpack-dev-server --open",
     "api": "cross-env NODE_ENV=development nodemon ./bin/www",
     "webpack": "cross-env NODE_ENV=development webpack --colors --watch",
@@ -112,6 +112,7 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.4.1",
+    "exports-loader": "^0.6.4",
     "express": "~4.13.4",
     "highlight.js": "^9.9.0",
     "lodash": "^4.17.2",
