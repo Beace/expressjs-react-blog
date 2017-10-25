@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.0"></a>
+# [0.10.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.9.0...v0.10.0) (2017-10-25)
+
+
+### Features
+
+* **package.json:** add fetch-polyfill ([3f6905c](https://github.com/BeAce/expressjs-react-blog/commit/3f6905c))
+* **package.json:** add fetch-polyfill ([64b140a](https://github.com/BeAce/expressjs-react-blog/commit/64b140a))
+* **webpack.base.config:** 修改webpack中的alian为modules ([00671d2](https://github.com/BeAce/expressjs-react-blog/commit/00671d2))
+* **webpack.base.config:** 建立公共的webpack配置文件 ([9891361](https://github.com/BeAce/expressjs-react-blog/commit/9891361))
+* **webpack.prod.config:** 修改生产环境和dev环境的webpack配置 ([8b19a51](https://github.com/BeAce/expressjs-react-blog/commit/8b19a51))
+* **yarn:** 添加fetch-polyfill whatwg-fetch ([7c3efee](https://github.com/BeAce/expressjs-react-blog/commit/7c3efee))
+
+
+
 <a name="0.9.0"></a>
 # [0.9.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.8.0...v0.9.0) (2017-10-19)
 
