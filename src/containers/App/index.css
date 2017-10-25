@@ -3,7 +3,7 @@
  * Copyright 2014 Start Bootstrap
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
-
+@import "~bootstrap/scss/bootstrap.scss";
 body {
   font-family: arial,sans-serif ,'Microsoft Yahei', 'Times New Roman';
   font-size: 18px;

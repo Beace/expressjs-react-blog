@@ -37,25 +37,27 @@ class HomePage extends React.Component {
                 <div className="post-preview">
                   <Loading />
                 </div>
-              ) : (
-                models.map(item => {
-                  const key = item._id;
-                  return (
-                    <div key={key} className="posts-overview">
-                      <div className="post-preview">
-                        <Link to={`/article/${item._id}`}>
-                          <h2 className="post-title">{item.title}</h2>
-                          <h3 className="post-subtitle">{item.abstract}</h3>
-                        </Link>
-                        <p className="post-meta">
-                          Posted by <a>{item.author}</a> on
+              ) :
+                <div className="fade-in">
+                  {models.map(item => {
+                    const key = item._id;
+                    return (
+                      <div key={key} className="posts-overview">
+                        <div className="post-preview">
+                          <Link to={`/article/${item._id}`}>
+                            <h2 className="post-title">{item.title}</h2>
+                            <h3 className="post-subtitle">{item.abstract}</h3>
+                          </Link>
+                          <p className="post-meta">
+                            Posted by <a>{item.author}</a> on
                           {item.date ? item.date.substring(0, 10) : Date.now()}
-                        </p>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })
-              )}
+                    );
+                  })}
+                </div>
+              }
             </div>
           </div>
         </div>
