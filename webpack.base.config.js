@@ -17,7 +17,21 @@ module.exports = options => ({
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -36,6 +50,11 @@ module.exports = options => ({
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.jsx'],
+    mainFields: [
+      'browser',
+      'jsnext:main',
+      'main',
+    ],
   },
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({
