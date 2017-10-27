@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.11.0"></a>
+# [0.11.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.10.0...v0.11.0) (2017-10-27)
+
+
+### Features
+
+* **components/Loading:** 修改loading动画样式 ([996e0a2](https://github.com/BeAce/expressjs-react-blog/commit/996e0a2))
+* **contaienrs/HomePage:** 修改样式 ([5f46dd5](https://github.com/BeAce/expressjs-react-blog/commit/5f46dd5))
+* **containers/App:** 改用boostrap中的sass文件和postcss结合 ([94b248d](https://github.com/BeAce/expressjs-react-blog/commit/94b248d))
+* **package.json:** 添加sass和postcss相关loader ([538ab13](https://github.com/BeAce/expressjs-react-blog/commit/538ab13))
+* **postcss/webpack:** 添加postcss以及相应webpackloader配置 ([fb2d7f2](https://github.com/BeAce/expressjs-react-blog/commit/fb2d7f2))
+
+
+
 <a name="0.10.0"></a>
 # [0.10.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.9.0...v0.10.0) (2017-10-25)
 
