@@ -1,0 +1,8 @@
+.news-item {
+  border: 1px solid #d5d5d5;
+  padding: 1rem;
+  border-radius: 5px;
+  & + & {
+    margin-top: 15px;
+  }
+}

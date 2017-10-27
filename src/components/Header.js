@@ -8,8 +8,8 @@ const Header = () =>
         <div className="col align-self-center">
           <div className="site-heading">
             <h1>React & NodeJS Clean Blog</h1>
-            <hr className="small" />
-            <span className="subheading">A Clean Blog By NodeJS And React</span>
+            <hr className="small d-none d-md-block" />
+            <span className="subheading d-none d-md-block">Writing the clean blog, talking the deep story.</span>
           </div>
         </div>
       </div>

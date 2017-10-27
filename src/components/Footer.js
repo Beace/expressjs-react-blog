@@ -4,7 +4,7 @@ const Footer = () => (
   <footer>
     <div className="container">
       <ul className="row align-items-center">
-        <li className="col text-center">
+        <li className="col">
           <a>
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x" />
@@ -12,7 +12,7 @@ const Footer = () => (
             </span>
           </a>
         </li>
-        <li className="col text-center">
+        <li className="col">
           <a>
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x" />
@@ -20,7 +20,7 @@ const Footer = () => (
             </span>
           </a>
         </li>
-        <li className="col text-center">
+        <li className="col">
           <a>
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x" />

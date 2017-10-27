@@ -63,7 +63,7 @@ class Post extends Component {
             <div className="row">
               {model.content ? (
                 <div
-                  className="col align-self-center"
+                  className="col align-self-center fade-in"
                   dangerouslySetInnerHTML={{ __html: model.content }}
                 />
               ) : (
