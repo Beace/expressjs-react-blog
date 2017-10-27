@@ -1,5 +1,8 @@
 .posts-overview {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &:last-child {
+    border-bottom: 0;
+  }
 }
 .fade-in {
   animation: fadein .8s;
@@ -11,8 +14,4 @@
   to {
     opacity: 1;
   }
-}
-
-.posts-overview:last-child {
-  border-bottom: 0;
 }
