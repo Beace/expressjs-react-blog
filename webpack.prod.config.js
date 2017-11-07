@@ -11,6 +11,12 @@ const plugins = [
     minChunks: 2,
     async: true,
   }),
+  new webpack.optimize.UglifyJsPlugin({
+    compressor: {
+      warnings: false,
+      screw_ie8: true,
+    },
+  }),
 
   // Minify and optimize the index.html
   new HtmlWebpackPlugin({
@@ -33,7 +39,7 @@ const plugins = [
 
 module.exports = require('./webpack.base.config')({
   entry: {
-    bundle: ['./src/index.js'],
+    main: ['./src/index.js'],
     vendor: VENDOR,
   },
   output: {

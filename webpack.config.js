@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -28,12 +29,18 @@ const plugins = [
 
 module.exports = require('./webpack.base.config')({
   entry: {
-    bundle: [
+    main: [
       'webpack-dev-server/client?http://localhost:3000',
+      'webpack/hot/only-dev-server',
       'react-hot-loader/patch',
-      './src/index.js',
+      path.join(__dirname, 'src/index.js'),
     ],
-    vendor: VENDOR,
+    vendor: [
+      'webpack-dev-server/client?http://localhost:3000',
+      'webpack/hot/only-dev-server',
+      'react-hot-loader/patch',
+      ...VENDOR,
+    ],
   },
   output: {
     filename: '[name].[hash].js',
@@ -48,14 +55,4 @@ module.exports = require('./webpack.base.config')({
     },
   ],
   plugins,
-  devServer: {
-    host: 'localhost',
-    port: 3000,
-    stats: { chunks: false },
-    historyApiFallback: true,
-    publicPath: '/',
-    hotOnly: true,
-    inline: true,
-    // quiet: true, // 处于静默模式，webpack-dashboard生效
-  },
 });

@@ -1,22 +1,24 @@
 import React from 'react';
 import { render } from 'react-dom';
-import 'react-hot-loader/patch';
-import { Router, browserHistory, applyRouterMiddleware } from 'react-router';
-import { useScroll } from 'react-router-scroll';
+import { AppContainer } from 'react-hot-loader';
 
-// Routes
+import Root from './root';
 import routes from './routes';
 
-const Routes = (
-  <Router
-    history={browserHistory}
-    render={
-      applyRouterMiddleware(useScroll())
-    }
-  >
-    {routes}
-  </Router>
-);
+const renderApp = appRoutes => {
+  render(
+    <AppContainer>
+      <Root routes={appRoutes} />
+    </AppContainer>,
+    document.getElementById('app')
+  );
+};
 
-const app = document.getElementById('app');
-render(Routes, app);
+renderApp(routes);
+
+if (module.hot) {
+  module.hot.accept('./routes', () => {
+    const newRoutes = require('./routes').default; // eslint-disable-line global-require
+    renderApp(newRoutes);
+  });
+}
