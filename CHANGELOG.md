@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.12.0"></a>
+# [0.12.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.11.0...v0.12.0) (2017-11-07)
+
+
+### Features
+
+* **build:** 重新build,修改webpack配置，采用react-hot-loader3 ([104bba0](https://github.com/BeAce/expressjs-react-blog/commit/104bba0))
+* **css:** modify css ([52a8833](https://github.com/BeAce/expressjs-react-blog/commit/52a8833))
+
+
+
 <a name="0.11.0"></a>
 # [0.11.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.10.0...v0.11.0) (2017-10-27)
 
