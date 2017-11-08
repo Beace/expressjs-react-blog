@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const Dashboard = require('webpack-dashboard');
 // const DashboardPlugin = require('webpack-dashboard/plugin');
 // const dashboard = new Dashboard();
-
+const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
 const VENDOR = ['react', 'react-dom', 'react-router'];
 
 const plugins = [
@@ -16,7 +16,7 @@ const plugins = [
   }),
   new CleanWebpackPlugin(['build/*.js'], {
     // 打印 log
-    verbose: true,
+    verbose: false,
     // 删除文件
     dry: false,
   }),
@@ -30,15 +30,10 @@ const plugins = [
 module.exports = require('./webpack.base.config')({
   entry: {
     main: [
-      'webpack-dev-server/client?http://localhost:3000',
-      'webpack/hot/only-dev-server',
-      'react-hot-loader/patch',
+      hotMiddlewareScript,
       path.join(__dirname, 'src/index.js'),
     ],
     vendor: [
-      'webpack-dev-server/client?http://localhost:3000',
-      'webpack/hot/only-dev-server',
-      'react-hot-loader/patch',
       ...VENDOR,
     ],
   },

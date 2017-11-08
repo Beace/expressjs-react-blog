@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=development node setup",
-    "browser": "cross-env NODE_ENV=development webpack-dev-server --open",
-    "api": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "api": "cross-env NODE_ENV=development node ./bin/www",
     "webpack": "cross-env NODE_ENV=development webpack --colors --watch",
     "build": "rm -rf build && cross-env NODE_ENV=production webpack --config webpack.prod.config.js -p --progress --color",
     "eslint": "eslint *.js server/**/ src/**/ --ext .js,.jsx",
@@ -13,6 +12,14 @@
     "generate": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "deploy": "gh-pages -d build"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/*",
+      "build/*",
+      "public/*",
+      "setup/*"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -138,6 +145,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-2": "^6.17.0",
     "babel-preset-stage-3": "^6.17.0",
     "babel-register": "^6.24.1",
@@ -170,7 +178,8 @@
     "style-loader": "^0.19.0",
     "webpack-dashboard": "^1.0.0-5",
     "webpack-dev-middleware": "^1.12.0",
-    "webpack-dev-server": "^2.6.1"
+    "webpack-dev-server": "^2.6.1",
+    "webpack-hot-middleware": "^2.20.0"
   },
   "config": {
     "commitizen": {

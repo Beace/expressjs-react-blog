@@ -1,30 +1,37 @@
+const path = require('path');
+const express = require('express');
 const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
-const config = require('../webpack.config');
+const webpackConfig = require('../webpack.config');
+const app = express();
 
-new WebpackDevServer(webpack(config), {
-  publicPath: config.output.publicPath,
-  hot: true,
-  historyApiFallback: true,
-  // It suppress error shown in console, so it has to be set to false.
-  quiet: false,
-  // It suppress everything except error, so it has to be set to false as well
-  // to see success build.
-  noInfo: false,
-  stats: {
-    // Config for minimal console.log mess.
-    assets: false,
-    colors: true,
-    version: false,
-    hash: false,
-    timings: false,
-    chunks: false,
-    chunkModules: false,
-  },
-}).listen(3000, 'localhost', err => {
-  if (err) {
-    console.log(err);
-  }
+// ************************************
+// This is the real meat of the example
+// ************************************
+// Step 1: Create & configure a webpack compiler
+const compiler = webpack(webpackConfig);
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+// Step 2: Attach the dev middleware to the compiler & the server
+if (process.env.NODE_ENV === 'development') {
+  // Step 3: Attach the hot middleware to the compiler & the server
+  app.use(webpackDevMiddleware(compiler, {
+    noInfo: true,
+    publicPath: webpackConfig.output.publicPath,
+    silent: true,
+    stats: 'errors-only',
+  }));
 
-  console.log('Listening at localhost:3000');
+  app.use(webpackHotMiddleware(compiler));
+}
+
+// Do anything you like with the rest of your express application.
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Listening on %j", 3000);
+});
+
