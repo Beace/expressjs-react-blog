@@ -71,7 +71,7 @@ module.exports = require('./webpack.base.config')({
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
   },
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-eval-source-map',
   rules: [
     {
       enforce: 'pre',

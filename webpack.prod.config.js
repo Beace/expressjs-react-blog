@@ -53,6 +53,7 @@ module.exports = require('./webpack.base.config')({
   },
   rules: [],
   plugins,
+  devtool: 'source-map',
   performance: {
     assetFilter: assetFilename =>
       !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
