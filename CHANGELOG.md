@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.13.0"></a>
+# [0.13.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.12.0...v0.13.0) (2017-11-10)
+
+
+### Features
+
+* **build:** 删除build文件夹，将dev环境下的目标文件保存在内存中 ([f4878d9](https://github.com/BeAce/expressjs-react-blog/commit/f4878d9))
+* **eslintrc:** 将package.json中的eslint规则提取 ([ac6411e](https://github.com/BeAce/expressjs-react-blog/commit/ac6411e))
+* **setup:** 提取客户端的server至setup，并在server中ignore掉nodemon的监听文件 ([3c3278e](https://github.com/BeAce/expressjs-react-blog/commit/3c3278e))
+* **webpack:** 添加bundle analysis分析打包情况 ([d6c11a2](https://github.com/BeAce/expressjs-react-blog/commit/d6c11a2))
+
+
+
 <a name="0.12.0"></a>
 # [0.12.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.11.0...v0.12.0) (2017-11-07)
 
