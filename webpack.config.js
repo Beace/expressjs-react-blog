@@ -68,7 +68,8 @@ module.exports = require('./webpack.base.config')({
     ],
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
   },
   devtool: 'inline-source-map',
   rules: [
