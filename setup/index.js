@@ -17,7 +17,7 @@ new WebpackDevServer(webpack(config), {
     colors: true,
     version: false,
     hash: false,
-    timings: false,
+    timings: true,
     chunks: false,
     chunkModules: false,
   },
