@@ -70,5 +70,11 @@ module.exports = options => ({
   devtool: options.devtool,
   target: 'web',
   performance: options.performance || {},
-  devServer: options.devServer || {},
+  node: {
+    dgram: 'empty',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    child_process: 'empty',
+  },
 });

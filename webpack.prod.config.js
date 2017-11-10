@@ -1,10 +1,15 @@
-const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VENDOR = ['react', 'react-dom', 'react-router'];
 
 const plugins = [
+  new CleanWebpackPlugin(['build/*'], {
+    // 打印 log
+    verbose: true,
+    // 删除文件
+    dry: false,
+  }),
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
     children: true,
