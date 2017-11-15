@@ -11,7 +11,7 @@ const plugins = [
     dry: false,
   }),
   new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
+    names: ['vendor', 'runtime'],
     children: true,
     minChunks: 2,
     async: true,
