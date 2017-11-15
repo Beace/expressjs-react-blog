@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.14.0"></a>
+# [0.14.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.13.0...v0.14.0) (2017-11-15)
+
+
+### Bug Fixes
+
+* **webpack.prod:** https://github.com/webpack/webpack/issues/1385 when using new UglifyJsPlugin and --opimize-minimize (or -p) you are adding the UglifyJsPlugin twice. Omit the CLI option. ([14515cc](https://github.com/BeAce/expressjs-react-blog/commit/14515cc))
+
+
+### Features
+
+* 前后端分离 ([44dde10](https://github.com/BeAce/expressjs-react-blog/commit/44dde10))
+* **build:** rebuild ([617638e](https://github.com/BeAce/expressjs-react-blog/commit/617638e))
+* **index.html:** 从OSS中添加静态资源图片 ([3a403aa](https://github.com/BeAce/expressjs-react-blog/commit/3a403aa))
+* **public/images/favicon.icon:** 添加favicon ([e0dad88](https://github.com/BeAce/expressjs-react-blog/commit/e0dad88))
+* **webpack:** add run time ([636cf28](https://github.com/BeAce/expressjs-react-blog/commit/636cf28))
+* **webpack:** add runtime common module plugin ([6144e2e](https://github.com/BeAce/expressjs-react-blog/commit/6144e2e))
+* **webpack:** 在dev环境下loader不输出哈希值 ([c5a851e](https://github.com/BeAce/expressjs-react-blog/commit/c5a851e))
+* **webpack.config:** 支持在生产环境中的sourcemap ([2acc1c4](https://github.com/BeAce/expressjs-react-blog/commit/2acc1c4))
+
+
+
 <a name="0.13.0"></a>
 # [0.13.0](https://github.com/BeAce/expressjs-react-blog/compare/v0.12.0...v0.13.0) (2017-11-10)
 
