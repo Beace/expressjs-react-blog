@@ -11,7 +11,7 @@ const VENDOR = ['react', 'react-dom', 'react-router'];
 const plugins = [
   // new DashboardPlugin(dashboard.setData),
   new webpack.optimize.CommonsChunkPlugin({
-    names: 'vendor',
+    names: ['vendor', 'runtime'],
     minChunks: Infinity,
   }),
   new HtmlWebpackPlugin({
