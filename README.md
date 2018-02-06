@@ -25,7 +25,7 @@ Collection: articles
 $ git clone https://github.com/BeAce/expressjs-react-blog.git
 $ cd expressjs-react-blog
 $ yarn
-~~$ npm run api~~ Move to https://github.com/BeAce/expressjs-react-blog-server to start a server
+// $ npm run api~ Move to https://github.com/BeAce/expressjs-react-blog-server to start a server
 // another terminal
 $ npm start
 ```
