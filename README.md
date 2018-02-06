@@ -8,7 +8,7 @@ node(expressjs) and react blog
 
 ## Visit
 
-[index page](http://react.beacelee.com/)
+[index page](https://react.beacelee.com/)
 
 ## how to run it ?
 
@@ -25,7 +25,7 @@ Collection: articles
 $ git clone https://github.com/BeAce/expressjs-react-blog.git
 $ cd expressjs-react-blog
 $ yarn
-$ npm run api
+~~$ npm run api~~ Move to https://github.com/BeAce/expressjs-react-blog-server to start a server
 // another terminal
 $ npm start
 ```
